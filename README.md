@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://imgur.com/4ye6zGV" width="350">
+<img src="https://64.media.tumblr.com/14d10d2d84d1c54d3307c34f8434a7ad/tumblr_mwvyon1D6U1qenwiuo5_r1_400.gifv" width="350">
   </p>
 # MyMuse
 Want a new way to keep up with your friends and see what they're up to? MyMuse is a music social media platform that allows you to share your 'song of the day' and explore what your friends have had on repeat!
