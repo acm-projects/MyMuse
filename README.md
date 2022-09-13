@@ -21,15 +21,16 @@ Want a new way to keep up with your friends and see what they're up to? MyMuse i
 # Milestones
 | Week # | Deliverables |
 |--------|--------------|
-| 1      | Decide teams and tech stack, set up environment and download software, get familiar with tech                                   |                                                             
-| 2      | Front-End: Finalize pages and start wireframes.<br />Back-End: Set up firebase and create databases, work on firebase user profile authentication                                       |
-| 3      | Keep working on week 2 deliverable. Start working on integration of color picker page with front-end.                                        |
-| 4      | Upload an image page. Send an image to the Imagga Color Extractor to extract color of furniture.                                             |
-| 5      | Continue working on Week 4 deliverable. Integrate front-end and back-end. Start creating MongoDB schema for favorite color choices.          |
-| 6      | Start work on "saved page". Finish any remaining integrations for "Upload Image" page and "Color Picker" page                                |
-| 7      | Continue work on "saved page" and continue integration.                                                                                      |             
-| 8      | Complete any remaining integrations. Start working on presentation slide deck.                                                               |
-| 9      | Practice presentation and add finishing touches! You can do it! 💙                                                                           |
+| 1      | Decide teams and tech stack, set up environment and download software, get familiar with tech.                                  |                                                             
+| 2      | Front-End: Finalize pages and start wireframes.<br />Back-End: Set up firebase and create databases.                                     |
+| 3      | Front-End: Finish wireframes.<br />Back-End: Work on firebase user profile authentication.                                      |
+| 4      | Front-End: Start coding UI for pages.<br />Back-End: Understand how to use APIs and integrate music API for "upload song" feature.                                            |
+| 5      | Front-End: Continue coding UI for pages.<br />Back-End: Add "messages" feature and "send/accept friend requests" feature.        |
+| 6      | Front-End: Finish coding UI for pages and finalize all pages. <br />Back-End: Work on generating user’s monthly stats.                            |
+| 7      | Start working on front-end and back-end integration.                                                                                     |             
+| 8      | Complete any remaining integration. Start working on presentation slide deck.                                                               |
+| 9      | Finish slide deck and begin presentation prep.                                                                          |
+| 10      | Practice presentation and add finishing touches! Y'all can do it!! <3                                                                           |
 
 # Tech Stack
   - Front-end: 
