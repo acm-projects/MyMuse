@@ -6,19 +6,23 @@
 Want a new way to keep up with your friends and see what they're up to? MyMuse is a music social media platform that allows you to share your 'song of the day' and explore what your friends have had on repeat!
 
 # MVP
-  - Return furniture suggestions to a user based on a given color palette.
-  - Upload images of your own furniture to get a matching color palette back.
-  - Create a "saved" section to save multiple ideas of a room with its corresponding pieces of furniture, similar to Instagram “collections”
+  - Create user profiles and add friends
+  - Sends users daily notifications to post their song of the day and show users their friends' songs of the day
+  - Can add messages to other people's song of the day
+  - Tracks users' song of the day to give them a breakdown after every month of their most played genres and artists, as well as generate a monthly color       based on the songs they listened to
 
 # Stretch Goals
-  - Provide a suggested/trending color palette generator for users.
-  - Give furniture suggestions based on past searches/viewed items.
-  - Create public "rooms" to get other opinions on your furniture combinations!
+  - Show album picture with song upload
+  - Favorite a song that someone has uploaded if you like the song
+  - Make a playlist of the users' songs of the day at the end of every month
+  - Users enter their daily mood and suggest a song based on that
+  - Send song recommendations to your friends
+
 # Milestones
-| Week # | Deliverables |
+| Week # | Task(s) |
 |--------|--------------|
-| 1      | Set up development environments. Start wireframes & API tutorials for backend. Push test files to GitHub.                                    |                                                             
-| 2      | Start "Color Picker" page. Set up middleware to fetch API information about furniture based on color.                                        |
+| 1      | Decide teams and tech stack, set up environment and download software, get familiar with tech                                   |                                                             
+| 2      | Front-End: Finalize pages and make wireframes Back-End: Set up firebase and create databases, work on firebase user profile authentication                                         |
 | 3      | Keep working on week 2 deliverable. Start working on integration of color picker page with front-end.                                        |
 | 4      | Upload an image page. Send an image to the Imagga Color Extractor to extract color of furniture.                                             |
 | 5      | Continue working on Week 4 deliverable. Integrate front-end and back-end. Start creating MongoDB schema for favorite color choices.          |
