@@ -19,14 +19,16 @@ Want a new way to keep up with your friends and see what they're up to? MyMuse i
   - Send song recommendations to your friends
 
 # Milestones
-| Week # | Task(s) |
+| Week # | Deliverables |
 |--------|--------------|
-| 1      | Decide teams and tech stack, set up environment and download software, get familiar with tech                                                |    | 2      | Front-End: Finalize pages and make wireframes Back-End: Set up firebase and create databases, work on firebase user profile authenticationn  |   
+| 1      | Set up development environments. Start wireframes & API tutorials for backend. Push test files to GitHub.                                    |                                                             
+| 2      | Start "Color Picker" page. Set up middleware to fetch API information about furniture based on color.                                        |
 | 3      | Keep working on week 2 deliverable. Start working on integration of color picker page with front-end.                                        |
 | 4      | Upload an image page. Send an image to the Imagga Color Extractor to extract color of furniture.                                             |
 | 5      | Continue working on Week 4 deliverable. Integrate front-end and back-end. Start creating MongoDB schema for favorite color choices.          |
 | 6      | Start work on "saved page". Finish any remaining integrations for "Upload Image" page and "Color Picker" page                                |
-| 7      | Continue work on "saved page" and continue integration.                                                                                      |  | 8      | Complete any remaining integrations. Start working on presentation slide deck.                                                               |
+| 7      | Continue work on "saved page" and continue integration.                                                                                      |             
+| 8      | Complete any remaining integrations. Start working on presentation slide deck.                                                               |
 | 9      | Practice presentation and add finishing touches! You can do it! 💙                                                                           |
 
 # Tech Stack
