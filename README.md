@@ -21,8 +21,8 @@ Want a new way to keep up with your friends and see what they're up to? MyMuse i
 # Milestones
 | Week # | Deliverables |
 |--------|--------------|
-| 1      | Set up development environments. Start wireframes & API tutorials for backend. Push test files to GitHub.                                    |                                                             
-| 2      | Start "Color Picker" page. Set up middleware to fetch API information about furniture based on color.                                        |
+| 1      | Decide teams and tech stack, set up environment and download software, get familiar with tech                                   |                                                             
+| 2      | Front-End: Finalize pages and start wireframes.<br />Set up firebase and create databases, firebase user profile authentication                                       |
 | 3      | Keep working on week 2 deliverable. Start working on integration of color picker page with front-end.                                        |
 | 4      | Upload an image page. Send an image to the Imagga Color Extractor to extract color of furniture.                                             |
 | 5      | Continue working on Week 4 deliverable. Integrate front-end and back-end. Start creating MongoDB schema for favorite color choices.          |
