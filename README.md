@@ -40,7 +40,7 @@ Want a new way to keep up with your friends and see what they're up to? MyMuse i
 - Front-End
   - React Native OR Flutter
 - Back-End
-  - [JavaScript](https://www.youtube.com/watch?v=W6NZfCO5SIk) OR [Dart](https://www.youtube.com/watch?v=veMhOYRib9o)
+  - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) OR [Dart](https://dart.dev/guides)
   - Firebase
 - Music APIs
   - [Feed.fm](https://www.feed.fm/music-api) 
@@ -68,8 +68,8 @@ This list is only meant to serve as a starting point for researching and buildin
   - [Article on UI/UX Tips](https://www.uxpin.com/studio/blog/guide-design-consistency-best-practices-ui-ux-designers/)
 - Back-End
   - [What's an API?](https://www.youtube.com/watch?v=SLwpqD8n3d0)
-  - [Dart Documentation](https://dart.dev/guides)
-  - [JavaScript Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+  - [JavaScript Tutorial](https://www.youtube.com/watch?v=W6NZfCO5SIk)
+  - [Dart Tutorial](https://www.youtube.com/watch?v=veMhOYRib9o)
   - [Firebase](https://firebase.google.com)
     - [Database](https://firebase.google.com/docs/database)
     - [Authentication](https://firebase.google.com/docs/auth)
