@@ -49,7 +49,7 @@ Want a new way to keep up with your friends and see what they're up to? MyMuse i
     - 1 month free and then $5 - $7 monthly subscription
   - [Deezer](https://rapidapi.com/deezerdevs/api/deezer-1)
     - Free, works with JS
-  - Other option: could use the youtube api to add a link to the song when the user       uploads, or can embed the youtube video for the song
+  - Other option: could use the Youtube API to add a link to the song when the user       uploads, or can embed the youtube video for the song
 
 # Software to Install
   - [VSCode](https://code.visualstudio.com/download) OR [Android Studio](https://developer.android.com/studio/?gclid=CjwKCAjw1ICZBhAzEiwAFfvFhOI2mIVEdKQy8u5hDkP2mG216Ll84NxMqnrRxqC5zJ5piPUV05VrxRoCTx0QAvD_BwE&gclsrc=aw.ds)
