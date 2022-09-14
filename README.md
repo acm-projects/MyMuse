@@ -41,7 +41,7 @@ Want a new way to keep up with your friends and see what they're up to? MyMuse i
   - React Native OR Flutter
 - Back-End
   - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) OR [Dart](https://dart.dev/guides)
-  - Firebase
+  - [Firebase](https://firebase.google.com)
 - Music APIs
   - [Feed.fm](https://www.feed.fm/music-api) 
     - $25 monthly subscription, also based on the number of songs played
@@ -70,7 +70,7 @@ This list is only meant to serve as a starting point for researching and buildin
   - [What's an API?](https://www.youtube.com/watch?v=SLwpqD8n3d0)
   - [JavaScript Tutorial](https://www.youtube.com/watch?v=W6NZfCO5SIk)
   - [Dart Tutorial](https://www.youtube.com/watch?v=veMhOYRib9o)
-  - [Firebase](https://firebase.google.com)
+  - Firebase
     - [Database](https://firebase.google.com/docs/database)
     - [Authentication](https://firebase.google.com/docs/auth)
     - [Cloud messaging](https://firebase.google.com/docs/cloud-messaging)
