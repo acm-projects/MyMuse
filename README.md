@@ -97,7 +97,7 @@ This list is only meant to serve as a starting point for researching and buildin
 1. Run `git commit -m <descriptive commit message>`	
 1. Run `git push` or if there is an error, copy the command given	
 ## When resolving merge conflicts	
-1. Git will throw some ugly looking error	
+Git will throw some ugly looking error	
 1. Go into the files it lists, and you will see some blocks of coded that are divided by	
 ```	
 >>>>>>>> <some numbers>	
@@ -107,5 +107,5 @@ this is some different code
 >>>>>>>> HEAD	
 ```	
 Delete all of the tags and *one* of the blocks of code	
-1. Do this for every file in the list	
-1. Commit those changes	
+2. Do this for every file in the list	
+4. Commit those changes	
