@@ -80,8 +80,7 @@ This list is only meant to serve as a starting point for researching and buildin
     
 # Git Workflow	
 ## When starting a project	
-1. Download [Git](https://git-scm.com/download)	
-1. Go to [the repository](https://github.com/acm-projects/reverse-climate-change), and find "Clone or Download," and copy that link	
+1. Go to [the repository](https://github.com/acm-projects/MyMuse), and find "Clone or Download," and copy that link	
 1. Go to a directory on your system	
 1. Open a terminal in that directory	
 1. Run `git clone <URL you copied>`	
@@ -97,7 +96,7 @@ This list is only meant to serve as a starting point for researching and buildin
 1. Run `git commit -m <descriptive commit message>`	
 1. Run `git push` or if there is an error, copy the command given	
 ## When resolving merge conflicts	
-Git will throw some ugly looking error	
+   Git will throw some ugly looking errors...	
 1. Go into the files it lists, and you will see some blocks of coded that are divided by	
 ```	
 >>>>>>>> <some numbers>	
@@ -106,6 +105,6 @@ this is some code
 this is some different code	
 >>>>>>>> HEAD	
 ```	
-Delete all of the tags and *one* of the blocks of code	
-2. Do this for every file in the list	
+2. Delete all of the tags and *one* of the blocks of code	
+3. Do this for every file in the list	
 4. Commit those changes	
