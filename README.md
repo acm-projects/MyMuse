@@ -86,6 +86,7 @@ This list is only meant to serve as a starting point for researching and buildin
     - [Accept friend requests](https://youtu.be/PTAyxkCl7g4)
 
 <<<<<<< HEAD
+
 # Git Workflow
 
 ## When starting a project
@@ -135,4 +136,7 @@ i am a sophomore and i like coding <br>
 i hate snakes
 
 well i LOVE snakes
->>>>>>> 154c0efb406288e2b17ca09f886cdf4b2d788744
+
+> > > > > > > 154c0efb406288e2b17ca09f886cdf4b2d788744
+
+make another change
