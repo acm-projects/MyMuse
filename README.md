@@ -108,3 +108,7 @@ this is some different code
 2. Delete all of the tags and *one* of the blocks of code	
 3. Do this for every file in the list	
 4. Commit those changes	
+
+hello i am max lichter i am 19 <br>
+i am a sophomore and i like coding <br>
+i hate snakes
