@@ -112,3 +112,5 @@ this is some different code
 hello i am max lichter i am 19 <br>
 i am a sophomore and i like coding <br>
 i hate snakes
+
+well i LOVE snakes
