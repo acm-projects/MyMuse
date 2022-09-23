@@ -85,6 +85,7 @@ This list is only meant to serve as a starting point for researching and buildin
     - [Send friend requests](https://youtu.be/iNamDuGAfhQ)
     - [Accept friend requests](https://youtu.be/PTAyxkCl7g4)
 
+<<<<<<< HEAD
 # Git Workflow
 
 ## When starting a project
@@ -128,3 +129,10 @@ this is some different code
 hello i am max lichter i am 19
 i am a sophomore and i like coding
 i love snakes
+=======
+hello i am max lichter i am 19 <br>
+i am a sophomore and i like coding <br>
+i hate snakes
+
+well i LOVE snakes
+>>>>>>> 154c0efb406288e2b17ca09f886cdf4b2d788744
