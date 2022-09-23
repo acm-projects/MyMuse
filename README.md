@@ -110,4 +110,4 @@ this is some different code
 4. Commit those changes	
 
 
-this is my change about! i'm mani, the frontend developer for MyMuse :)
+this is my change about! i'm mani, the frontend developer for MyMuse :D
