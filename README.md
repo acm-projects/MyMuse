@@ -136,11 +136,8 @@ i am a sophomore and i like coding <br>
 i hate snakes
 
 well i LOVE snakes
-<<<<<<< HEAD
 i hate this team
-=======
 
 > > > > > > > 154c0efb406288e2b17ca09f886cdf4b2d788744
 
 make another change
->>>>>>> refs/remotes/origin/frontend-max
