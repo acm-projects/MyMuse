@@ -5,7 +5,8 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mymuse/main.dart';
-import 'package:mymuse/uploadSong.dart';
+
+import 'homePage.dart';
 
 void main() => runApp(MaterialApp(
       home: login(),
@@ -191,10 +192,8 @@ class login extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => uploadSong()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => homePage()));
                     },
                   ),
                 ),

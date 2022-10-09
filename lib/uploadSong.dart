@@ -6,6 +6,8 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'homePage.dart';
+
 void main() => runApp(MaterialApp(
       home: uploadSong(),
     ));
@@ -25,9 +27,27 @@ class uploadSong extends StatelessWidget {
             child: Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(22, 40, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(0, 35, 0, 0),
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => homePage()));
+                    },
+                    child: Container(
+                      height: 28,
+                      width: 14,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage('assets/BackArrow.png'),
+                            fit: BoxFit.cover),
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 40, 0, 0),
                   child: Container(
-                      width: 346.0,
+                      width: 306.0,
                       height: 53.0,
                       decoration: BoxDecoration(
                         image: const DecorationImage(
