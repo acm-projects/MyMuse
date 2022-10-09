@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mymuse/createAccount.dart';
 import 'package:mymuse/login.dart';
+import 'package:mymuse/uploadSong.dart';
 
 void main() => runApp(const MaterialApp(
       home: Home(),
@@ -122,10 +122,8 @@ class Home extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const createAccount()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => uploadSong()));
                   },
                 ),
               ),
