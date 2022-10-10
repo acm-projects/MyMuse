@@ -8,6 +8,7 @@ import 'package:mymuse/uploadSong.dart';
 
 void main() => runApp(MaterialApp(
       home: homePage(),
+      debugShowCheckedModeBanner: false,
     ));
 
 class homePage extends StatelessWidget {

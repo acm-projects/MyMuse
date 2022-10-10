@@ -3,6 +3,7 @@ import 'package:mymuse/createAccount.dart';
 import 'package:mymuse/login.dart';
 
 void main() => runApp(const MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Home(),
     ));
 
