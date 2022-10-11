@@ -579,17 +579,24 @@ class comments extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(30),
                                 ),
                                 child: TextFormField(
+                                    style: const TextStyle(
+                                      fontSize: 14.0,
+                                      fontFamily: 'Gotham',
+                                      color: Colors.white,
+                                      decorationThickness: 0,
+                                    ),
                                     decoration: const InputDecoration(
-                                  contentPadding:
-                                      EdgeInsets.fromLTRB(19, 0, 30, 0),
-                                  border: InputBorder.none,
-                                  hintStyle: TextStyle(
-                                    fontSize: 12.0,
-                                    fontFamily: 'Gotham',
-                                    color: Color.fromARGB(255, 180, 179, 179),
-                                  ),
-                                  hintText: ('Post your comment here'),
-                                ))),
+                                      contentPadding:
+                                          EdgeInsets.fromLTRB(19, 0, 30, 0),
+                                      border: InputBorder.none,
+                                      hintStyle: TextStyle(
+                                        fontSize: 14.0,
+                                        fontFamily: 'Gotham',
+                                        color:
+                                            Color.fromARGB(255, 255, 255, 255),
+                                      ),
+                                      hintText: ('Post your comment here'),
+                                    ))),
                           ),
                           Padding(
                             padding: const EdgeInsets.fromLTRB(0, 40, 0, 0),
