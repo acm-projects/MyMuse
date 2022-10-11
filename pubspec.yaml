@@ -67,11 +67,13 @@ flutter:
     - assets/Search.png
     - assets/FakeAlbum.png
     - assets/FakeProfileSmall.png
+    - assets/FakeProfileLarge.png
     - assets/FakePersonalProfileSmall.png
     - assets/Taylor.png
     - assets/Heart.png
     - assets/HeartPurple.png
     - assets/Comment.png
+    - assets/FakeFriendProfile.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
