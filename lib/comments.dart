@@ -444,7 +444,7 @@ class comments extends StatelessWidget {
                                   height: 45,
                                   width: 350,
                                   child: Text(
-                                    "I don't know what t hdahi dwiha ihwd j w jod  jowt hdahi dwiha ihwd j w jod  jowt hdahi dwiha ihwd j w jod  jowt hdahi dwiha ihwd j w jod  jowt hdahi dwiha ihwd j w jod  jow ",
+                                    "I don't knjowt hdahi dwiha ihwd j w jod  jowt hdahi dwiha ihwd j w jod  jowt hdahi dwiha ihwd j w jod  jow ",
                                     textAlign: TextAlign.left,
                                     style: TextStyle(
                                       fontSize: 12.0,
@@ -538,7 +538,7 @@ class comments extends StatelessWidget {
                                   height: 45,
                                   width: 350,
                                   child: Text(
-                                    "I don't know what t hdahi dwiha ihwd j w jod  jowt hdahi dwiha ihwd j w jod  jowt hdahi dwiha ihwd j w jod  jowt hdahi dwiha ihwd j w jod  jowt hdahi dwiha ihwd j w jod  jow ",
+                                    "wd j w jod  jowt hdiha ihwd j w jod  jowt hdahi dwiha ihwd j w jod  jow ",
                                     textAlign: TextAlign.left,
                                     style: TextStyle(
                                       fontSize: 12.0,

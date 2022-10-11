@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mymuse/createAccount.dart';
-import 'package:mymuse/login.dart';
+import 'package:mymuse/monthlyBreakdown.dart';
 
 void main() => runApp(const MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -64,8 +64,10 @@ class Home extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => login()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => monthlyBreakdown()));
                   },
                 ),
               ),

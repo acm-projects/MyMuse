@@ -68,6 +68,7 @@ flutter:
     - assets/FakeAlbum.png
     - assets/FakeProfileSmall.png
     - assets/FakeProfileLarge.png
+    - assets/FakeAlbum2.png
     - assets/FakePersonalProfileSmall.png
     - assets/Taylor.png
     - assets/Heart.png
