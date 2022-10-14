@@ -111,7 +111,7 @@ class Home extends StatelessWidget {
                 width: 346.0,
                 height: 53.0,
                 decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 150, 52, 200),
+                  color: Colors.deepPurpleAccent[400],
                   borderRadius: BorderRadius.circular(30),
                 ),
                 child: OutlinedButton(

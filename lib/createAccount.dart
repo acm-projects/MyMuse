@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_import, file_names
+// ignore_for_file: unnecessary_import, file_names, prefer_const_constructors
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -29,10 +29,8 @@ class createAccount extends StatelessWidget {
                     padding: const EdgeInsets.fromLTRB(0, 0, 89, 10),
                     child: TextButton(
                       onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const Home()));
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Home()));
                       },
                       child: Container(
                         height: 28,
@@ -288,7 +286,7 @@ class createAccount extends StatelessWidget {
                 width: 346.0,
                 height: 53.0,
                 decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 150, 52, 200),
+                  color: Colors.deepPurpleAccent[400],
                   borderRadius: BorderRadius.circular(30),
                 ),
                 child: OutlinedButton(
