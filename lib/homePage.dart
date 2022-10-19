@@ -1,43 +1,27 @@
-// ignore_for_file: unnecessary_import, use_key_in_widget_constructors, camel_case_types, file_names, library_private_types_in_public_api
+// ignore: duplicate_ignore
+// ignore_for_file: unnecessary_import, use_key_in_widget_constructors, camel_case_types, file_names, library_private_types_in_public_api, duplicate_ignore, non_constant_identifier_names
 
 import 'dart:ui';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:dot_navigation_bar/dot_navigation_bar.dart';
-
 import 'package:mymuse/uploadSong.dart';
-
 import 'comments.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
+void main() => runApp(MaterialApp(
       home: homePage(),
-    );
-  }
-}
+    ));
 
+String default_heart = 'assets/Heart.png';
+// ignore: non_constant_identifier_names
+String default_heart2 = 'assets/Heart.png';
+
+// ignore: camel_case_types, use_key_in_widget_constructors
 class homePage extends StatefulWidget {
   @override
-  _HomeState createState() => _HomeState();
+  State<homePage> createState() => _homePageState();
 }
 
-class _HomeState extends State<homePage> {
-  var _selectedTab = _SelectedTab.homePage;
-
-  void _handleIndexChanged(int i) {
-    setState(() {
-      _selectedTab = _SelectedTab.values[i];
-    });
-  }
-
+class _homePageState extends State<homePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -403,17 +387,12 @@ class _HomeState extends State<homePage> {
                         width: 40,
                         height: 40,
                         child: TextButton(
-                          onPressed: () {},
-                          child: Container(
-                            height: 30,
-                            width: 30,
-                            decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                image: AssetImage('assets/Heart.png'),
-                              ),
-                            ),
-                          ),
-                        ),
+                            onPressed: () {
+                              setState(() {
+                                default_heart = 'assets/HeartPurple.png';
+                              });
+                            },
+                            child: Image.asset(default_heart)),
                       ))
                 ],
               ),
@@ -580,17 +559,12 @@ class _HomeState extends State<homePage> {
                         width: 40,
                         height: 40,
                         child: TextButton(
-                          onPressed: () {},
-                          child: Container(
-                            height: 30,
-                            width: 30,
-                            decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                image: AssetImage('assets/Heart.png'),
-                              ),
-                            ),
-                          ),
-                        ),
+                            onPressed: () {
+                              setState(() {
+                                default_heart2 = 'assets/HeartPurple.png';
+                              });
+                            },
+                            child: Image.asset(default_heart2)),
                       ))
                 ],
               ),
@@ -625,47 +599,6 @@ class _HomeState extends State<homePage> {
           ]),
         ]))
       ]))),
-      extendBody: true,
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.only(bottom: 10),
-        child: DotNavigationBar(
-          margin: const EdgeInsets.only(left: 10, right: 10),
-          currentIndex: _SelectedTab.values.indexOf(_selectedTab),
-          backgroundColor: Colors.deepPurpleAccent[400],
-          dotIndicatorColor: Colors.white,
-          unselectedItemColor: Colors.grey[300],
-          enableFloatingNavBar: true,
-          onTap: _handleIndexChanged,
-          items: [
-            /// Home
-            DotNavigationBarItem(
-              icon: const Icon(Icons.home),
-              selectedColor: Colors.white,
-            ),
-
-            /// Likes
-            DotNavigationBarItem(
-              icon: const Icon(Icons.search),
-              // padding: EdgeInsets.only(right: 10),
-              selectedColor: Colors.white,
-            ),
-
-            /// Search
-            DotNavigationBarItem(
-              icon: const Icon(Icons.inbox),
-              selectedColor: Colors.white,
-            ),
-
-            /// Profile
-            DotNavigationBarItem(
-              icon: const Icon(Icons.person),
-              selectedColor: Colors.white,
-            ),
-          ],
-        ),
-      ),
     );
   }
 }
-
-enum _SelectedTab { homePage, favorite, search, person }

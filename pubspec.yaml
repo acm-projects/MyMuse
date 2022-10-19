@@ -77,6 +77,8 @@ flutter:
     - assets/HeartPurple.png
     - assets/Comment.png
     - assets/FakeFriendProfile.png
+    - assets/testProfile.png
+    - assets/testPlus.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

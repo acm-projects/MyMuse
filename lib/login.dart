@@ -6,7 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mymuse/main.dart';
 
-import 'homePage.dart';
+import 'nav.dart';
 
 void main() => runApp(MaterialApp(
       home: login(),
@@ -158,7 +158,7 @@ class login extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 12.0,
                     fontFamily: 'Gotham',
-                    color: Color.fromARGB(255, 150, 52, 200),
+                    color: Color.fromARGB(255, 101, 31, 255),
                   ),
                 ),
               ),
@@ -178,7 +178,7 @@ class login extends StatelessWidget {
                   width: 346.0,
                   height: 53.0,
                   decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 150, 52, 200),
+                    color: Colors.deepPurpleAccent[400],
                     borderRadius: BorderRadius.circular(30),
                   ),
                   child: OutlinedButton(
@@ -192,8 +192,10 @@ class login extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => homePage()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const navMain()));
                     },
                   ),
                 ),

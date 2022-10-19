@@ -3,8 +3,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'homePage.dart';
 import 'main.dart';
+import 'nav.dart';
 
 void main() => runApp(const MaterialApp(
       home: createAccount(),
@@ -301,7 +301,7 @@ class createAccount extends StatelessWidget {
                   ),
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => homePage()));
+                        MaterialPageRoute(builder: (context) => navMain()));
                   },
                 ),
               ),
