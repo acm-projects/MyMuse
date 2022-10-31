@@ -106,7 +106,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Column(
               children: <Widget>[
                 TextField(
-                  controller: _emailController,
+                  controller: _emailController
                   decoration: InputDecoration(
                     labelText: 'EMAIL',
                     labelStyle: TextStyle(
