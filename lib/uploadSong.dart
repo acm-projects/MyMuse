@@ -5,8 +5,7 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'homePage.dart';
+import 'package:mymuse/nav.dart';
 
 void main() => runApp(MaterialApp(
       home: uploadSong(),
@@ -30,8 +29,10 @@ class uploadSong extends StatelessWidget {
                   padding: const EdgeInsets.fromLTRB(0, 35, 0, 0),
                   child: TextButton(
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => homePage()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const navMain()));
                     },
                     child: Container(
                       height: 28,
