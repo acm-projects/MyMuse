@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:test_flutter/addfriends.dart';
 import 'package:test_flutter/friendrequest.dart';
 import 'package:dot_navigation_bar/dot_navigation_bar.dart';
+import 'package:test_flutter/editprofile.dart';
 
 import 'main.dart';
 
@@ -85,7 +86,7 @@ class UserProfile extends StatelessWidget {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => addFriends()));
+                                      builder: (context) => EditProfile()));
                             },
                           ),
                         ),
@@ -107,13 +108,16 @@ class UserProfile extends StatelessWidget {
                   ),
                 ),
               ),
-              const Text(
-                "Amy Smith",
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                  fontSize: 23.0,
-                  fontFamily: 'Gotham',
-                  color: Colors.white,
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: const Text(
+                  "Amy Smith",
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                    fontSize: 23.0,
+                    fontFamily: 'Gotham',
+                    color: Colors.white,
+                  ),
                 ),
               ),
               const SizedBox(
@@ -131,37 +135,37 @@ class UserProfile extends StatelessWidget {
               const SizedBox(
                 height: 30,
               ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(22, 0, 22, 10),
-                child: Container(
-                  width: 277.0,
-                  height: 53.0,
-                  decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 42, 42, 42),
-                    border: Border.all(
-                      color: Color.fromARGB(255, 180, 179, 179),
-                    ),
-                    borderRadius: BorderRadius.circular(100),
-                  ),
-                  child: OutlinedButton(
-                    child: const Text(
-                      'View Monthly Breakdown',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 14.0,
-                        fontFamily: 'Gotham',
-                        color: Colors.white,
-                      ),
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => addFriends()));
-                    },
-                  ),
-                ),
-              ),
+              // Padding(
+              //   padding: const EdgeInsets.fromLTRB(22, 0, 22, 10),
+              //   child: Container(
+              //     width: 277.0,
+              //     height: 53.0,
+              //     decoration: BoxDecoration(
+              //       color: Color.fromARGB(255, 42, 42, 42),
+              //       border: Border.all(
+              //         color: Color.fromARGB(255, 180, 179, 179),
+              //       ),
+              //       borderRadius: BorderRadius.circular(100),
+              //     ),
+              //     child: OutlinedButton(
+              //       child: const Text(
+              //         'View Monthly Breakdown',
+              //         textAlign: TextAlign.center,
+              //         style: TextStyle(
+              //           fontSize: 14.0,
+              //           fontFamily: 'Gotham',
+              //           color: Colors.white,
+              //         ),
+              //       ),
+              //       onPressed: () {
+              //         Navigator.push(
+              //             context,
+              //             MaterialPageRoute(
+              //                 builder: (context) => addFriends()));
+              //       },
+              //     ),
+              //   ),
+              // ),
               const SizedBox(
                 height: 10,
               ),
@@ -345,6 +349,7 @@ class UserProfile extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
+                      // CHANGE USER FLOW HERE
                       Navigator.push(
                           context,
                           MaterialPageRoute(

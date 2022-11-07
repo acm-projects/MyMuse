@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:test_flutter/addfriends.dart';
 import 'package:test_flutter/friendrequest.dart';
 import 'package:dot_navigation_bar/dot_navigation_bar.dart';
+import 'package:test_flutter/userprofile.dart';
 
 import 'main.dart';
 
@@ -23,17 +24,17 @@ class _EditProfile extends State<EditProfile> {
 
   @override
   Widget build(BuildContext context) {
-    Color getColor(Set<MaterialState> states) {
-      const Set<MaterialState> interactiveStates = <MaterialState>{
-        MaterialState.pressed,
-        MaterialState.hovered,
-        MaterialState.focused,
-      };
-      if (states.any(interactiveStates.contains)) {
-        return Colors.deepPurpleAccent;
-      }
-      return Colors.deepPurpleAccent;
-    }
+    // Color getColor(Set<MaterialState> states) {
+    //   const Set<MaterialState> interactiveStates = <MaterialState>{
+    //     MaterialState.pressed,
+    //     MaterialState.hovered,
+    //     MaterialState.focused,
+    //   };
+    //   if (states.any(interactiveStates.contains)) {
+    //     return Colors.deepPurpleAccent;
+    //   }
+    //   return Colors.deepPurpleAccent;
+    // }
 
     return Scaffold(
         backgroundColor: const Color.fromARGB(255, 42, 42, 42),
@@ -53,7 +54,7 @@ class _EditProfile extends State<EditProfile> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Home()));
+                                    builder: (context) => UserProfile()));
                           },
                           child: Container(
                             alignment: Alignment.topCenter,
@@ -207,23 +208,43 @@ class _EditProfile extends State<EditProfile> {
                             fontFamily: 'Gotham',
                             color: Color.fromARGB(255, 180, 179, 179),
                           ),
-                          hintText: ('Enter your new username'),
+                          hintText: ('Enter your new password'),
                         ))),
               ),
-              CheckboxListTile(
-                checkColor: Colors.white,
-                tileColor: Colors.deepPurpleAccent,
-                //fillColor: MaterialStateProperty.resolveWith(getColor),
-                value: isChecked,
-                onChanged: (bool? value) {
-                  // This is where we update the state when the checkbox is tapped
-                  setState(() {
-                    isChecked = value!;
-                  });
-                },
+              Padding(
+                padding: const EdgeInsets.fromLTRB(100, 15, 50, 0),
+                child: Row(
+                  children: [
+                    Checkbox(
+                      // NOT CHECKING
+                      checkColor: Colors.white,
+                      // tileColor: Color.fromARGB(255, 42, 42, 42),
+                      activeColor: Colors.deepPurpleAccent,
+
+                      // title: Text("Notifications"),
+                      //fillColor: MaterialStateProperty.resolveWith(getColor),
+                      value: isChecked,
+                      onChanged: (bool? value) {
+                        // This is where we update the state when the checkbox is tapped
+                        setState(() {
+                          isChecked = value!;
+                        });
+                      },
+                    ),
+                    Text(
+                      "Notifications",
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                        fontSize: 18.0,
+                        fontFamily: 'Gotham',
+                        color: Color.fromARGB(255, 180, 179, 179),
+                      ),
+                    ),
+                  ],
+                ),
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(22, 25, 22, 20),
+                padding: const EdgeInsets.fromLTRB(22, 17, 22, 20),
                 child: Container(
                   width: 150.0,
                   height: 50.0,
@@ -242,6 +263,7 @@ class _EditProfile extends State<EditProfile> {
                       ),
                     ),
                     onPressed: () {
+                      // CHANGE USER FLOW HERE
                       Navigator.push(
                           context,
                           MaterialPageRoute(

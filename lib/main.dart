@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: addFriends(), // what is the main page
+      home: UserProfile(), // what is the main page
     );
   }
 }
