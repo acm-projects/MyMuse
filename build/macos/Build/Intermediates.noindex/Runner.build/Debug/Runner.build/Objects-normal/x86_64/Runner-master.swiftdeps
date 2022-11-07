@@ -1,8 +1,0 @@
-version: "Apple Swift version 5.7.1 (swiftlang-5.7.1.134.3 clang-1400.0.29.51)"
-options: "b3b73746c5998798fef15a314fd75d073bcb11ee4049bc00bcf43a72385a09e6"
-build_start_time: [1667321716, 930228948]
-build_end_time: [1667321732, 923774003]
-inputs:
-  "/Users/dheepthak/Desktop/ACM Project/MyMuse/macos/Flutter/GeneratedPluginRegistrant.swift": [1667321693, 859057426]
-  "/Users/dheepthak/Desktop/ACM Project/MyMuse/macos/Runner/AppDelegate.swift": [1667321670, 240832328]
-  "/Users/dheepthak/Desktop/ACM Project/MyMuse/macos/Runner/MainFlutterWindow.swift": [1667321670, 246314525]
