@@ -9,21 +9,46 @@ import 'package:mymuse/screens/signup_screen.dart';
 import 'package:mymuse/utils/colors.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mymuse/application/audio_player/audio_player_cubit.dart';
+import 'package:mymuse/application/song/song_cubit.dart';
+import 'package:mymuse/infrastructure/song_remote_repository.dart';
+import 'package:mymuse/infrastructure/song_remote_service.dart';
+import 'package:mymuse/presentation/song_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(const MyApp());
+  runApp(
+    MyApp(
+      songCubit: SongCubit(
+        SongRemoteRepository(
+          SongRemoteService(),
+        ),
+      ),
+  ),
+  );
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({
+      Key? key,
+      required this.songCubit,
+}) : super(key: key);
+
+final SongCubit songCubit;
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
+        BlocProvider(
+          create: (_) => songCubit,
+        ),
+        BlocProvider(
+          create: (_) => AudioPlayerCubit(songCubit: songCubit)..init(),
+        ),
         ChangeNotifierProvider(create: (_) => UserProvider(),),
       ],
       child: MaterialApp(
