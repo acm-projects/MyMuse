@@ -3,6 +3,8 @@ import 'package:mymuse/utils/utils.dart';
 import '../resources/auth_methods.dart';
 import 'homePage.dart';
 import 'onboard_screen.dart';
+import 'package:mymuse/responsive/mobile_screen_layout.dart';
+
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -34,6 +36,12 @@ class _LoginScreenState extends State<LoginScreen> {
 
     if(res == "success"){
       // do nothing
+Navigator.push(context, MaterialPageRoute(builder: (context) => MobileScreenLayout()));
+
+    setState(() {
+      _isLoading = false;
+    });
+
     } else {
       showSnackBar(res, context);
     }

@@ -1,21 +1,36 @@
 import 'package:flutter/material.dart';
 import 'package:mymuse/main.dart';
 import 'package:mymuse/screens/login_screen.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:mymuse/follow_button.dart';
+
 
 import '../resources/auth_methods.dart';
 import '../responsive/mobile_screen_layout.dart';
 
 // ignore_for_file: file_names
 
+class MonthlyBreakdown extends StatefulWidget {
+  
+  const MonthlyBreakdown({Key? key}) : super(key: key);
 
-void main() => runApp(MaterialApp(
-  home: monthlyBreakdown(),
-));
+  @override 
+  _MonthlyBreakdownState createState() => _MonthlyBreakdownState();
+}
+
 
 // ignore: camel_case_types, use_key_in_widget_constructors
-class monthlyBreakdown extends StatelessWidget {
+class _MonthlyBreakdownState extends State<MonthlyBreakdown> {
 
-  const monthlyBreakdown({Key? key}) : super(key: key);
+  final FirebaseAuth auth = FirebaseAuth.instance;
+  //signout function 
+  signOut() async {
+    await auth.signOut();
+    Navigator.pushReplacement(
+        context, MaterialPageRoute(builder: (context) => LoginScreen()));
+  }
+  
 
   @override
   Widget build(BuildContext context) {
@@ -26,8 +41,7 @@ class monthlyBreakdown extends StatelessWidget {
         centerTitle: false,
         actions: [
           TextButton(onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => MobileScreenLayout()));
+            signOut();
 
           }, child: const Text('LOGOUT', style: TextStyle(
             color: Colors.deepPurpleAccent,

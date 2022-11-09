@@ -3,6 +3,7 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:mymuse/resources/auth_methods.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:mymuse/responsive/mobile_screen_layout.dart';
 
 import '../utils/utils.dart';
 import 'onboard_screen.dart';
@@ -59,6 +60,7 @@ class _createAccountState extends State<createAccount> {
         showSnackBar(res, context);
       } else {
         // Show nothing
+Navigator.push(context, MaterialPageRoute(builder: (context) => MobileScreenLayout()));
       }
   }
 

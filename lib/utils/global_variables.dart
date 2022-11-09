@@ -8,5 +8,6 @@ import '../screens/homePage.dart';
 const homeScreenItems = [
   homePage(),
   Text('search'),
-  monthlyBreakdown(),
+  //Text('nothing'),
+  MonthlyBreakdown(),
 ];
