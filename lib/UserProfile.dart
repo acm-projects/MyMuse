@@ -4,7 +4,6 @@
 // ignore_for_file: file_names, duplicate_ignore
 
 import 'package:flutter/material.dart';
-import 'package:mymuse/nav.dart';
 
 import 'EditProfile.dart';
 

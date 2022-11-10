@@ -5,7 +5,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart'; /*
 import 'package:test_flutter/addfriends.dart';
 import 'package:test_flutter/friendrequest.dart';*/
-import 'package:mymuse/UserProfile.dart';
 import 'package:mymuse/nav.dart';
 //import 'package:test_flutter/userprofile.dart';
 
