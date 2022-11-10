@@ -150,7 +150,10 @@ class login extends StatelessWidget {
                           hintText: ('Enter your password'),
                         ))),
               ),
-              const Padding(
+              const SizedBox(
+                height: 22.0,
+              ),
+              /*const Padding(
                 padding: EdgeInsets.fromLTRB(43, 5, 240, 8),
                 child: Text(
                   "Forgot Password?",
@@ -161,7 +164,7 @@ class login extends StatelessWidget {
                     color: Color.fromARGB(255, 101, 31, 255),
                   ),
                 ),
-              ),
+              ),*/
               const Center(
                 child: Divider(
                   indent: 27,

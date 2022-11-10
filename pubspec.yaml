@@ -79,6 +79,11 @@ flutter:
     - assets/FakeFriendProfile.png
     - assets/testProfile.png
     - assets/testPlus.png
+    - assets/Plus.png
+    - assets/Check.png
+    - assets/Cancel.png
+    - assets/Clock.png
+    - assets/Large.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

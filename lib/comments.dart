@@ -1,7 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
-import 'package:mymuse/homePage.dart';
+import 'package:mymuse/nav.dart';
 
 void main() => runApp(MaterialApp(
       home: comments(),
@@ -27,7 +27,7 @@ class comments extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => homePage()));
+                                builder: (context) => const navMain()));
                       },
                       child: Container(
                         alignment: Alignment.topCenter,

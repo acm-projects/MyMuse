@@ -2,10 +2,11 @@
 
 import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:mymuse/UserProfile.dart';
+import 'package:mymuse/addFriends.dart';
 import 'package:mymuse/homePage.dart';
+// ignore: unused_import
 import 'package:mymuse/monthlyBreakdown.dart';
-
-import 'comments.dart';
 
 void main() {
   runApp(const MyApp());
@@ -45,7 +46,7 @@ class _RunState extends State<navMain> {
     });
   }
 
-  final pages = [homePage(), comments(), monthlyBreakdown()];
+  final pages = [homePage(), addFriends(), UserProfile()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
