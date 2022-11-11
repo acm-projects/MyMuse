@@ -16,7 +16,7 @@ class SongPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text(
           'Music Search',
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: Colors.white),
         ),
         centerTitle: true,
         backgroundColor: Colors.transparent,
@@ -33,7 +33,7 @@ class SongPage extends StatelessWidget {
                   builder: (context, state) => state.status.when(
                     initial: () => const EmptyWidget(
                       key: Key('__initial__'),
-                      text: 'Start a search',
+                      text: 'Start a search!',
                     ),
                     loading: () => const Center(
                       child: CircularProgressIndicator(

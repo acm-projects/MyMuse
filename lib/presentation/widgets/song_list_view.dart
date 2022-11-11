@@ -25,7 +25,7 @@ class SongListView extends StatelessWidget {
           },
           child: Card(
             elevation: 2,
-            color: Colors.white,
+            color: Colors.black45,
             margin: const EdgeInsets.all(8.0),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(3),
@@ -99,7 +99,7 @@ class SongListView extends StatelessWidget {
                             padding: EdgeInsets.only(right: 20.0),
                             child: Icon(
                               Icons.bar_chart,
-                              color: Colors.red,
+                              color: Colors.purple,
                             ),
                           );
                         }
@@ -107,7 +107,7 @@ class SongListView extends StatelessWidget {
                           padding: EdgeInsets.only(right: 20.0),
                           child: Icon(
                             Icons.play_arrow,
-                            color: Colors.black,
+                            color: Colors.purple,
                           ),
                         );
                       },
