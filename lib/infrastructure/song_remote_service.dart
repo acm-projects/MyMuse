@@ -20,7 +20,9 @@ class SongRemoteService {
           'term': searchTerm,
           'media': 'music',
           'attribute': 'artistTerm',
-          'limit': '5',
+          'attribute': 'songTerm',
+          'attribute': 'albumTerm',
+          'limit': '15',
         },
       );
       var songResponse = await _httpClient.get(songRequest);

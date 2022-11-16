@@ -109,7 +109,7 @@ Navigator.push(context, MaterialPageRoute(builder: (context) => MobileScreenLayo
                     height: 62.0,
                   ),
                   const Padding(
-                    padding: EdgeInsets.fromLTRB(43, 0, 258, 9),
+                    padding: EdgeInsets.fromLTRB(43, 0, 254, 9),
                     child: Text(
                       "Username",
                       textAlign: TextAlign.left,
@@ -191,17 +191,8 @@ Navigator.push(context, MaterialPageRoute(builder: (context) => MobileScreenLayo
                             ),
                             obscureText: true)),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.fromLTRB(43, 5, 240, 8),
-                    child: Text(
-                      "Forgot Password?",
-                      textAlign: TextAlign.left,
-                      style: TextStyle(
-                        fontSize: 12.0,
-                        fontFamily: 'Gotham',
-                        color: Color.fromARGB(255, 150, 52, 200),
-                      ),
-                    ),
+                  const SizedBox(
+                    height: 20.0,
                   ),
                   const Center(
                     child: Divider(

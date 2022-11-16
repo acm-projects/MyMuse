@@ -1,3 +1,4 @@
+
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -21,7 +22,7 @@ class AudioPlayerButtons extends StatelessWidget {
                 child: ListTile(
                   tileColor: Colors.grey.withOpacity(0.2),
                   leading: ClipRRect(
-                    borderRadius: BorderRadius.circular(5.0),
+                    borderRadius: BorderRadius.circular(7.0),
                     child: SizedBox(
                       width: 40,
                       height: 40,
@@ -50,7 +51,7 @@ class AudioPlayerButtons extends StatelessWidget {
                       children: [
                         IconButton(
                           icon: const Icon(Icons.skip_previous),
-                          color: Colors.black,
+                          color: Colors.white,
                           onPressed: () async =>
                               context.read<AudioPlayerCubit>().hasPrevious
                                   ? await context
@@ -68,15 +69,16 @@ class AudioPlayerButtons extends StatelessWidget {
                               ready: () => IconButton(
                                 icon: const Icon(Icons.play_arrow),
                                 splashColor: Colors.transparent,
-                                color: Colors.black,
+                                color: Colors.white,
                                 onPressed: () async => await context
                                     .read<AudioPlayerCubit>()
                                     .play(),
+
                               ),
                               completed: () => IconButton(
                                 icon: const Icon(Icons.replay),
                                 splashColor: Colors.transparent,
-                                color: Colors.black,
+                                color: Colors.white,
                                 onPressed: () async => await context
                                     .read<AudioPlayerCubit>()
                                     .seekToStart(),
@@ -92,7 +94,7 @@ class AudioPlayerButtons extends StatelessWidget {
                               orElse: () => const IconButton(
                                 icon: Icon(Icons.play_arrow),
                                 splashColor: Colors.transparent,
-                                color: Colors.black,
+                                color: Colors.white,
                                 onPressed: null,
                               ),
                             ),
@@ -100,7 +102,7 @@ class AudioPlayerButtons extends StatelessWidget {
                         ),
                         IconButton(
                           icon: const Icon(Icons.skip_next),
-                          color: Colors.black,
+                          color: Colors.white,
                           onPressed: () async =>
                               context.read<AudioPlayerCubit>().hasNext
                                   ? await context
@@ -133,7 +135,7 @@ class LoadingWidget extends StatelessWidget {
       child: Center(
         child: CircularProgressIndicator(
           strokeWidth: 3,
-          color: Colors.black54,
+          color: Colors.white,
         ),
       ),
     );

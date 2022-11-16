@@ -37,7 +37,7 @@ class _SearchBarState extends State<SearchBar> {
               key: const Key('__searchTextField__'),
               controller: _textEditingController,
               decoration: InputDecoration(
-                hintText: 'Enter an artist name',
+                hintText: 'Artist, Song, Album Name',
                 suffixIcon: IconButton(
                   icon: const Icon(Icons.clear),
                   onPressed: () {

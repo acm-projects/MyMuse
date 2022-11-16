@@ -1,7 +1,13 @@
+
 import 'package:flutter/material.dart';
 import 'package:mymuse/application/audio_player/audio_player_cubit.dart';
 import 'package:mymuse/domain/song.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mymuse/screens/feed.dart';
+import 'package:mymuse/screens/trash.dart';
+import 'package:mymuse/screens/homePage.dart';
+import 'package:mymuse/responsive/mobile_screen_layout.dart';
+import 'package:mymuse/presentation/widgets/new_muse.dart';
 
 class SongListView extends StatelessWidget {
   final List<Song> songs;
@@ -20,8 +26,18 @@ class SongListView extends StatelessWidget {
           onTap: () {
             FocusManager.instance.primaryFocus?.unfocus();
             context
-                .read<AudioPlayerCubit>()
-                .seekToIndex(index: index, playList: songs);
+                  .read<AudioPlayerCubit>()
+                  .seekToIndex(index: index, playList: songs);
+
+                  noMusePostedPage = false;
+
+                  Navigator.push(
+                    context, 
+                    MaterialPageRoute(
+                      builder: (context) => MobileScreenLayout(),
+                      ));
+
+
           },
           child: Card(
             elevation: 2,
@@ -107,7 +123,7 @@ class SongListView extends StatelessWidget {
                           padding: EdgeInsets.only(right: 20.0),
                           child: Icon(
                             Icons.play_arrow,
-                            color: Colors.purple,
+                            color: Colors.white,
                           ),
                         );
                       },

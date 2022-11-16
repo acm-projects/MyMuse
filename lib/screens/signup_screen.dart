@@ -95,7 +95,7 @@ Navigator.push(context, MaterialPageRoute(builder: (context) => MobileScreenLayo
                               ),
                             ),
                           ),
-                          Center(
+                          /*Center(
                             child: Container(
                               height: 60,
                               width: 95,
@@ -105,7 +105,7 @@ Navigator.push(context, MaterialPageRoute(builder: (context) => MobileScreenLayo
                                 ),
                               ),
                             ),
-                          ),
+                          ),*/
                         ],
                       ),
                     ),
@@ -140,7 +140,7 @@ Navigator.push(context, MaterialPageRoute(builder: (context) => MobileScreenLayo
                     ],
                     ),
                     const Padding(
-                      padding: EdgeInsets.fromLTRB(43, 18, 258, 9),
+                      padding: EdgeInsets.fromLTRB(43, 18, 254, 9),
                       child: Text(
                         "Username",
                         textAlign: TextAlign.left,
@@ -223,7 +223,7 @@ Navigator.push(context, MaterialPageRoute(builder: (context) => MobileScreenLayo
                               obscureText: true)),
                     ),
                     const Padding(
-                      padding: EdgeInsets.fromLTRB(43, 5, 90, 8),
+                      padding: EdgeInsets.fromLTRB(43, 5, 82, 8),
                       child: Text(
                         "password must contain 8+ characters and minimum one number",
                         textAlign: TextAlign.left,
@@ -235,7 +235,7 @@ Navigator.push(context, MaterialPageRoute(builder: (context) => MobileScreenLayo
                       ),
                     ),
                     const Padding(
-                      padding: EdgeInsets.fromLTRB(43, 18, 184, 9),
+                      padding: EdgeInsets.fromLTRB(43, 18, 177, 9),
                       child: Text(
                         "Confirm Password",
                         textAlign: TextAlign.left,

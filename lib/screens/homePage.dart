@@ -12,8 +12,15 @@ import 'package:mymuse/infrastructure/song_remote_repository.dart';
 import 'package:mymuse/infrastructure/song_remote_service.dart';
 import 'package:mymuse/presentation/song_page.dart';
 import 'package:mymuse/main.dart';
+import 'package:mymuse/presentation/widgets/audio_player_buttons.dart';
+import 'package:provider/provider.dart';
+
+import '../models/user.dart';
+import '../providers/user_provider.dart';
 
 //import 'package:mymuse/uploadSong.dart';
+
+bool noMusePostedPage = true;
 
 void main() => runApp(MaterialApp(
   home: homePage(),
@@ -29,6 +36,8 @@ class homePage extends StatefulWidget {
 class _homePageState extends State<homePage> {
   @override
   Widget build(BuildContext context) {
+        final User user = Provider.of<UserProvider>(context).getUser;
+
     return Scaffold(
         backgroundColor: const Color.fromARGB(255, 42, 42, 42),
         body: Center(
@@ -54,7 +63,8 @@ class _homePageState extends State<homePage> {
                               ),
                             ),
                             Center(
-                              child: Container(
+                              child: (noMusePostedPage
+                              ? Container(
                                 width: 335.0,
                                 height: 84.0,
                                 decoration: BoxDecoration(
@@ -78,12 +88,67 @@ class _homePageState extends State<homePage> {
                                             builder: (context) => SongPage()));
                                   },
                                 ),
+                              ) :
+          // Column(
+          //   children: const [AudioPlayerButtons()],
+          // );
+
+
+            //                   const Divider(
+            //   indent: 15,
+            //   endIndent: 15,
+            //   color: Color.fromARGB(255, 180, 179, 179),
+            //   thickness: 2,
+            // );
+            Row(
+               mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      CircleAvatar(
+                        backgroundImage: NetworkImage(
+                          user.photoUrl,
+                        ),
+                      ),
+                      Padding(
+                          padding: EdgeInsets.fromLTRB(1, 10, 0, 0),
+                          child: SizedBox(
+                            height: 45,
+                            width: 300,
+                            child: Text(
+                              user.username,
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                fontFamily: 'Gotham',
+                                color: Colors.white,
                               ),
                             ),
-                
-                
- 
-                          ]))
-                    ]))));
+                          )),
+                    ])
+                          
+                          ),
+
+                          
+
+              //  const Align(
+              //    alignment: Alignment.bottomCenter,
+              //    child: AudioPlayerButtons(),
+              //  )
+
+                            ),
+                            Column(
+children: const [AudioPlayerButtons()],
+),
+                          ],
+                          ),
+                      ),
+                    ],
+                    
+                    )
+                    )
+                    
+                    )
+                    
+            );
   }
 }
