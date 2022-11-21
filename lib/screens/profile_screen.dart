@@ -4,8 +4,10 @@ import 'package:mymuse/screens/login_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:mymuse/follow_button.dart';
+import 'package:provider/provider.dart';
 
 
+import '../providers/user_provider.dart';
 import '../resources/auth_methods.dart';
 import '../responsive/mobile_screen_layout.dart';
 
@@ -37,6 +39,9 @@ class _MonthlyBreakdownState extends State<MonthlyBreakdown> {
   @override
   Widget build(BuildContext context) {
 
+      //final User user = Provider.of<UserProvider>(context).getUser;
+
+
 return Scaffold(
         backgroundColor: const Color.fromARGB(255, 42, 42, 42),
         body: Align(
@@ -61,7 +66,7 @@ return Scaffold(
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(22, 45, 10, 10),
+                        padding: const EdgeInsets.fromLTRB(5, 45, 10, 10),
                         child: Container(
                           width: 108,
                           height: 45.0,
