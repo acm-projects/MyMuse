@@ -6,7 +6,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:mymuse/follow_button.dart';
 import 'package:provider/provider.dart';
 
-
+import '../presentation/widgets/audio_player_buttons.dart';
 import '../providers/user_provider.dart';
 import '../resources/auth_methods.dart';
 import '../responsive/mobile_screen_layout.dart';
@@ -14,35 +14,27 @@ import '../responsive/mobile_screen_layout.dart';
 // ignore_for_file: file_names
 
 class MonthlyBreakdown extends StatefulWidget {
-  
   const MonthlyBreakdown({Key? key}) : super(key: key);
 
-  @override 
+  @override
   _MonthlyBreakdownState createState() => _MonthlyBreakdownState();
 }
 
-
 // ignore: camel_case_types, use_key_in_widget_constructors
 class _MonthlyBreakdownState extends State<MonthlyBreakdown> {
-    
   TextEditingController textarea = TextEditingController();
 
   final FirebaseAuth auth = FirebaseAuth.instance;
-  //signout function 
+  //signout function
   signOut() async {
     await auth.signOut();
     Navigator.pushReplacement(
         context, MaterialPageRoute(builder: (context) => LoginScreen()));
   }
-  
 
   @override
   Widget build(BuildContext context) {
-
-      //final User user = Provider.of<UserProvider>(context).getUser;
-
-
-return Scaffold(
+    return Scaffold(
         backgroundColor: const Color.fromARGB(255, 42, 42, 42),
         body: Align(
             alignment: Alignment.topCenter,
@@ -70,31 +62,31 @@ return Scaffold(
                         child: Container(
                           width: 108,
                           height: 45.0,
-                          decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 42, 42, 42),
-                            border: Border.all(
-                              color: const Color.fromARGB(255, 180, 179, 179),
-                            ),
-                            borderRadius: BorderRadius.circular(100),
-                          ),
-                          child: OutlinedButton(
-                            child: const Text(
-                              'Edit Profile',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 12.0,
-                                fontFamily: 'Gotham',
-                                color: Colors.white,
-                              ),
-                            ),
-                            onPressed: () {
-                              // Navigator.push(
-                              //     context,
-                              //     MaterialPageRoute(
-                              //         builder: (context) =>
-                              //             const EditProfile()));
-                            },
-                          ),
+                          // decoration: BoxDecoration(
+                          //   color: const Color.fromARGB(255, 42, 42, 42),
+                          //   border: Border.all(
+                          //     color: const Color.fromARGB(255, 180, 179, 179),
+                          //   ),
+                          //   borderRadius: BorderRadius.circular(100),
+                          // ),
+                          // child: OutlinedButton(
+                          //   child: const Text(
+                          //     'Edit Profile',
+                          //     textAlign: TextAlign.center,
+                          //     style: TextStyle(
+                          //       fontSize: 12.0,
+                          //       fontFamily: 'Gotham',
+                          //       color: Colors.white,
+                          //     ),
+                          //   ),
+                          //   onPressed: () {
+                          //     // Navigator.push(
+                          //     //     context,
+                          //     //     MaterialPageRoute(
+                          //     //         builder: (context) =>
+                          //     //             const EditProfile()));
+                          //   },
+                          // ),
                         ),
                       ),
                     ]),
@@ -102,20 +94,23 @@ return Scaffold(
                 ],
               )),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(6.0),
                 child: Center(
-                  child: Container(
-                    height: 150,
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage('assets/Large.png'),
-                          fit: BoxFit.fitHeight),
+                  child: Padding(
+                    //height: 150,
+                    padding: const EdgeInsets.fromLTRB(2, 5, 0, 20),
+                    child: CircleAvatar(
+                      backgroundColor: Colors.grey,
+                      backgroundImage: NetworkImage(
+                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgyC_srTtkjeTIZQKWZ2ryiGnPq3jT8ey7Cw&usqp=CAU',
+                      ),
+                      radius: 85,
                     ),
                   ),
                 ),
               ),
               const Padding(
-                padding: EdgeInsets.only(top: 10),
+                padding: EdgeInsets.only(top: 1),
                 child: Text(
                   "Amy Smith",
                   textAlign: TextAlign.left,
@@ -130,6 +125,8 @@ return Scaffold(
                 height: 6,
               ),
               const Text(
+                //user.username,
+
                 "@amy.smith123",
                 textAlign: TextAlign.left,
                 style: TextStyle(
@@ -178,7 +175,7 @@ return Scaffold(
               Center(
                   child: Container(
                 width: 355.0,
-                height: 254.0,
+                height: 230.0,
                 decoration: BoxDecoration(
                   border: Border.all(
                       width: 1.3,
@@ -194,10 +191,10 @@ return Scaffold(
                               // mainAxisAlignment: MainAxisAlignment.center,
                               children: const [
                             Text(
-                              "Most Mused Artist",
+                              "MyMuse.............",
                               textAlign: TextAlign.left,
                               style: TextStyle(
-                                fontSize: 20.0,
+                                fontSize: 27.0,
                                 fontFamily: 'Gotham',
                                 color: Color.fromARGB(255, 255, 255, 255),
                               ),
@@ -208,130 +205,94 @@ return Scaffold(
                       children: [
                         Container(
                             color: const Color.fromARGB(255, 42, 42, 42),
-                            margin: const EdgeInsets.fromLTRB(15, 0, 0, 0),
-                            child: InkWell(
-                                splashColor:
-                                    const Color.fromARGB(255, 42, 42, 42),
-                                child: Row(
-                                  children: [
-                                    Container(
-                                        width: 337,
-                                        height: 60,
-                                        decoration: const BoxDecoration(
-                                          image: DecorationImage(
-                                            alignment: Alignment(-.95, 0),
-                                            image: AssetImage(
-                                                'assets/FakeAlbum.png'),
-                                            scale: 0.9,
-                                          ),
-                                        ),
-                                        child: Row(
-                                          children: [
-                                            Column(children: const [
-                                              Padding(
-                                                  padding: EdgeInsets.fromLTRB(
-                                                      69, 20, 0, 0),
-                                                  child: SizedBox(
-                                                    height: 20,
-                                                    width: 187,
-                                                    child: Text(
-                                                      "Kendrick Lamar",
-                                                      textAlign: TextAlign.left,
-                                                      style: TextStyle(
-                                                        fontSize: 17.0,
-                                                        fontFamily: 'Gotham',
-                                                        color: Colors.white,
-                                                      ),
-                                                    ),
-                                                  )),
-                                            ]),
-                                          ],
-                                        )),
-                                  ],
-                                )))
+                            )
                       ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 25, 120, 0),
-                      child:
-                          Column(crossAxisAlignment: CrossAxisAlignment.start,
-                              // mainAxisAlignment: MainAxisAlignment.center,
-                              children: const [
-                            Text(
-                              "Most Mused Song",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                fontSize: 20.0,
-                                fontFamily: 'Gotham',
-                                color: Color.fromARGB(255, 255, 255, 255),
-                              ),
-                            ),
-                          ]),
+                    Column(
+                                          children: const [AudioPlayerButtons()],
+
                     ),
-                    Row(
-                      children: [
-                        Container(
-                            color: const Color.fromARGB(255, 42, 42, 42),
-                            margin: const EdgeInsets.fromLTRB(15, 0, 0, 0),
-                            child: InkWell(
-                                splashColor:
-                                    const Color.fromARGB(255, 42, 42, 42),
-                                child: Row(
-                                  children: [
-                                    Container(
-                                        width: 337,
-                                        height: 80,
-                                        decoration: const BoxDecoration(
-                                          image: DecorationImage(
-                                            alignment: Alignment(-.95, 0),
-                                            image: AssetImage(
-                                                'assets/FakeAlbum.png'),
-                                            scale: 0.9,
-                                          ),
-                                        ),
-                                        child: Row(
-                                          children: [
-                                            Column(children: const [
-                                              Padding(
-                                                  padding: EdgeInsets.fromLTRB(
-                                                      70, 22, 0, 0),
-                                                  child: SizedBox(
-                                                    height: 20,
-                                                    width: 211,
-                                                    child: Text(
-                                                      "Die Hard",
-                                                      textAlign: TextAlign.left,
-                                                      style: TextStyle(
-                                                        fontSize: 17.0,
-                                                        fontFamily: 'Gotham',
-                                                        color: Colors.white,
-                                                      ),
-                                                    ),
-                                                  )),
-                                              Padding(
-                                                padding: EdgeInsets.fromLTRB(
-                                                    40, 0, 0, 10),
-                                                child: SizedBox(
-                                                    height: 12,
-                                                    width: 175,
-                                                    child: Text(
-                                                      "Kendrick Lamar",
-                                                      textAlign: TextAlign.left,
-                                                      style: TextStyle(
-                                                        fontSize: 10.0,
-                                                        fontFamily: 'Gotham',
-                                                        color: Color.fromARGB(
-                                                            255, 180, 179, 179),
-                                                      ),
-                                                    )),
-                                              ),
-                                            ]),
-                                          ],
-                                        )),
-                                  ],
-                                )))
-                      ],
-                    ),
+                    // Padding(
+                    //   padding: const EdgeInsets.fromLTRB(0, 25, 120, 0),
+                    //   child:
+                    //       Column(crossAxisAlignment: CrossAxisAlignment.start,
+                    //           // mainAxisAlignment: MainAxisAlignment.center,
+                    //           children: const [
+                    //         Text(
+                    //           "Most Mused Song",
+                    //           textAlign: TextAlign.left,
+                    //           style: TextStyle(
+                    //             fontSize: 20.0,
+                    //             fontFamily: 'Gotham',
+                    //             color: Color.fromARGB(255, 255, 255, 255),
+                    //           ),
+                    //         ),
+                    //       ]),
+                    // ),
+                    // Row(
+                    //   children: [
+                    //     Container(
+                    //         color: const Color.fromARGB(255, 42, 42, 42),
+                    //         margin: const EdgeInsets.fromLTRB(15, 0, 0, 0),
+                    //         child: InkWell(
+                    //             splashColor:
+                    //                 const Color.fromARGB(255, 42, 42, 42),
+                    //             child: Row(
+                    //               children: [
+                    //                 Container(
+                    //                     width: 337,
+                    //                     height: 80,
+                    //                     decoration: const BoxDecoration(
+                    //                       image: DecorationImage(
+                    //                         alignment: Alignment(-.95, 0),
+                    //                         image: AssetImage(
+                    //                             'assets/FakeAlbum.png'),
+                    //                         scale: 0.9,
+                    //                       ),
+                    //                     ),
+                    //                     child: Row(
+                    //                       children: [
+                    //                         Column(children: const [
+                    //                           Padding(
+                    //                               padding: EdgeInsets.fromLTRB(
+                    //                                   70, 22, 0, 0),
+                    //                               child: SizedBox(
+                    //                                 height: 20,
+                    //                                 width: 211,
+                    //                                 child: Text(
+                    //                                   "Die Hard",
+                    //                                   textAlign: TextAlign.left,
+                    //                                   style: TextStyle(
+                    //                                     fontSize: 17.0,
+                    //                                     fontFamily: 'Gotham',
+                    //                                     color: Colors.white,
+                    //                                   ),
+                    //                                 ),
+                    //                               )),
+                    //                           Padding(
+                    //                             padding: EdgeInsets.fromLTRB(
+                    //                                 40, 0, 0, 10),
+                    //                             child: SizedBox(
+                    //                                 height: 12,
+                    //                                 width: 175,
+                    //                                 child: Text(
+                    //                                   "Kendrick Lamar",
+                    //                                   textAlign: TextAlign.left,
+                    //                                   style: TextStyle(
+                    //                                     fontSize: 10.0,
+                    //                                     fontFamily: 'Gotham',
+                    //                                     color: Color.fromARGB(
+                    //                                         255, 180, 179, 179),
+                    //                                   ),
+                    //                                 )),
+                    //                           ),
+                    //                         ]),
+                    //                       ],
+                    //                     )),
+                    //               ],
+                    //             )))
+                    //   ],
+                    // ),
                   ],
                 ),
               )),
@@ -355,8 +316,7 @@ return Scaffold(
                       ),
                     ),
                     onPressed: () {
-
-                                  signOut();
+                      signOut();
                       /*
                       // CHANGE USER FLOW HERE
                       Navigator.push(

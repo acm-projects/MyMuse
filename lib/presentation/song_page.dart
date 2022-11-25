@@ -53,10 +53,10 @@ class SongPage extends StatelessWidget {
                   ),
                 ),
               ),
-              const Align(
-                alignment: Alignment.bottomCenter,
-                child: AudioPlayerButtons(),
-              )
+              // const Align(
+              //   alignment: Alignment.bottomCenter,
+              //   child: AudioPlayerButtons(),
+              // )
             ],
           )
         ],

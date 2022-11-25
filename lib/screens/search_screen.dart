@@ -61,6 +61,25 @@ class _SearchScreenState extends State<SearchScreen> {
                       }));
                 }),
               )
-            : Text("Posts"));
+            : Scaffold(
+        backgroundColor: const Color.fromARGB(255, 42, 42, 42),
+        body: Center(
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 108, 0, 0),
+                  child: Container(
+                    height: 80,
+                    width: 80,
+                    decoration: const BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage('assets/LogoLarge.png'),
+                          fit: BoxFit.cover),
+                    ),
+                  ),
+                ),
+   
+              ],
+            ))));
   }
 }

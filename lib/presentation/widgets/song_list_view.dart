@@ -4,6 +4,7 @@ import 'package:mymuse/application/audio_player/audio_player_cubit.dart';
 import 'package:mymuse/domain/song.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mymuse/screens/feed.dart';
+import 'package:mymuse/screens/postMuse.dart';
 import 'package:mymuse/screens/trash.dart';
 import 'package:mymuse/screens/homePage.dart';
 import 'package:mymuse/responsive/mobile_screen_layout.dart';
@@ -27,14 +28,13 @@ class SongListView extends StatelessWidget {
             FocusManager.instance.primaryFocus?.unfocus();
             context
                   .read<AudioPlayerCubit>()
-                  .seekToIndex(index: index, playList: songs);
-
+                  .seekToIndex(index: index, playList: songs);                    
                   noMusePostedPage = false;
 
                   Navigator.push(
                     context, 
                     MaterialPageRoute(
-                      builder: (context) => MobileScreenLayout(),
+                      builder: (context) => const AddPostScreen(),
                       ));
 
 
@@ -101,35 +101,38 @@ class SongListView extends StatelessWidget {
                 ),
 
                 // Widget displaying the selected/playing song indicator.
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const SizedBox(width: 20.0),
-                    BlocBuilder<AudioPlayerCubit, AudioPlayerState>(
-                      builder: (context, state) {
-                        if (state.currentIndex == index &&
-                            state.isPlaying &&
-                            songs[index].previewUrl ==
-                                state.playList[index].previewUrl) {
-                          return const Padding(
-                            padding: EdgeInsets.only(right: 20.0),
-                            child: Icon(
-                              Icons.bar_chart,
-                              color: Colors.purple,
-                            ),
-                          );
-                        }
-                        return const Padding(
-                          padding: EdgeInsets.only(right: 20.0),
-                          child: Icon(
-                            Icons.play_arrow,
-                            color: Colors.white,
-                          ),
-                        );
-                      },
-                    ),
-                  ],
-                ),
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //   children: [
+                //     const SizedBox(width: 20.0),
+                //     BlocBuilder<AudioPlayerCubit, AudioPlayerState>(
+                //       builder: (context, state) {
+                //         if (state.currentIndex == index &&
+                //             state.isPlaying &&
+                //             songs[index].previewUrl ==
+                //                 state.playList[index].previewUrl) {
+                //           return const Padding(
+                //             padding: EdgeInsets.only(right: 20.0),
+                //             child: Icon(
+                //               Icons.bar_chart,
+                //               color: Colors.purple,
+                              
+                //             ),
+                            
+                            
+                //           );
+                //         }
+                //         return const Padding(
+                //           padding: EdgeInsets.only(right: 20.0),
+                //           child: Icon(
+                //             Icons.play_arrow,
+                //             color: Colors.white,
+                //           ),
+                //         );
+                //       },
+                //     ),
+                //   ],
+                // ),
               ],
             ),
           ),
