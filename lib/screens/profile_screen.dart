@@ -4,9 +4,11 @@ import 'package:mymuse/screens/login_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:mymuse/follow_button.dart';
+import 'package:mymuse/utils/utils.dart';
 import 'package:provider/provider.dart';
 
 import '../presentation/widgets/audio_player_buttons.dart';
+import '../presentation/widgets/diff_follow_button.dart';
 import '../providers/user_provider.dart';
 import '../resources/auth_methods.dart';
 import '../responsive/mobile_screen_layout.dart';
@@ -14,7 +16,8 @@ import '../responsive/mobile_screen_layout.dart';
 // ignore_for_file: file_names
 
 class MonthlyBreakdown extends StatefulWidget {
-  const MonthlyBreakdown({Key? key}) : super(key: key);
+  final String uid;
+  const MonthlyBreakdown({Key? key, required this.uid}) : super(key: key);
 
   @override
   _MonthlyBreakdownState createState() => _MonthlyBreakdownState();
@@ -22,6 +25,50 @@ class MonthlyBreakdown extends StatefulWidget {
 
 // ignore: camel_case_types, use_key_in_widget_constructors
 class _MonthlyBreakdownState extends State<MonthlyBreakdown> {
+  var userData = {};
+  int postLen = 0;
+  int followers = 0;
+  int following = 0;
+  bool isFollowing = false;
+  bool isLoading = false;
+
+
+  @override
+  void initState() {
+    super.initState();
+    getData();
+  }
+
+  getData() async {
+    setState(() {
+      isLoading = true;
+    });
+    try {
+      var userSnap = await FirebaseFirestore.instance
+          .collection('users')
+          .doc(widget.uid)
+          .get();
+
+      // get post length
+
+      var postSnap = await FirebaseFirestore.instance
+          .collection('muses')
+          .where('uid', isEqualTo: FirebaseAuth.instance.currentUser!.uid).get();
+      postLen = postSnap.docs.length;
+      userData = userSnap.data()!;
+      followers = userSnap.data()!['followers'].length;
+      following = userSnap.data()!['following'].length;
+      isFollowing = userSnap.data()!['followers'].contains(FirebaseAuth.instance.currentUser!.uid);
+
+      setState(() {});
+    } catch (e) {
+      showSnackBar(e.toString(), context);
+    }
+    setState(() {
+      isLoading = false;
+    });
+  }
+
   TextEditingController textarea = TextEditingController();
 
   final FirebaseAuth auth = FirebaseAuth.instance;
@@ -34,7 +81,8 @@ class _MonthlyBreakdownState extends State<MonthlyBreakdown> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return isLoading ? 
+    const Center(child: CircularProgressIndicator(),) : Scaffold(
         backgroundColor: const Color.fromARGB(255, 42, 42, 42),
         body: Align(
             alignment: Alignment.topCenter,
@@ -46,21 +94,44 @@ class _MonthlyBreakdownState extends State<MonthlyBreakdown> {
                   SingleChildScrollView(
                     child: Row(children: [
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(137, 50, 0, 20),
-                        child: Container(
-                          height: 80,
-                          width: 115,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage('assets/LogoLarge.png'),
-                            ),
-                          ),
+                    padding: const EdgeInsets.fromLTRB(0, 35, 80, 20),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const MobileScreenLayout()));
+                      },
+                      child: Container(
+                        alignment: Alignment.topCenter,
+                        height: 28,
+                        width: 14,
+                        decoration: const BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage('assets/BackArrow.png'),
+                              fit: BoxFit.cover),
                         ),
                       ),
+                      
+                    ),
+                    
+                  ),
+                      // Padding(
+                      //   padding: const EdgeInsets.fromLTRB(137, 50, 0, 20),
+                      //   child: Container(
+                      //     height: 80,
+                      //     width: 115,
+                      //     decoration: const BoxDecoration(
+                      //       image: DecorationImage(
+                      //         image: AssetImage('assets/LogoLarge.png'),
+                      //       ),
+                      //     ),
+                      //   ),
+                      // ),
                       Padding(
                         padding: const EdgeInsets.fromLTRB(5, 45, 10, 10),
                         child: Container(
-                          width: 108,
+                          width: 109,
                           height: 45.0,
                           // decoration: BoxDecoration(
                           //   color: const Color.fromARGB(255, 42, 42, 42),
@@ -102,17 +173,19 @@ class _MonthlyBreakdownState extends State<MonthlyBreakdown> {
                     child: CircleAvatar(
                       backgroundColor: Colors.grey,
                       backgroundImage: NetworkImage(
-                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgyC_srTtkjeTIZQKWZ2ryiGnPq3jT8ey7Cw&usqp=CAU',
+                        //'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgyC_srTtkjeTIZQKWZ2ryiGnPq3jT8ey7Cw&usqp=CAU',
+                        userData['photoUrl'],
                       ),
                       radius: 85,
                     ),
                   ),
                 ),
               ),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.only(top: 1),
                 child: Text(
-                  "Amy Smith",
+                  //"Amy Smith",
+                  userData['username'],
                   textAlign: TextAlign.left,
                   style: TextStyle(
                     fontSize: 23.0,
@@ -122,53 +195,102 @@ class _MonthlyBreakdownState extends State<MonthlyBreakdown> {
                 ),
               ),
               const SizedBox(
-                height: 6,
+                height: 4,
               ),
-              const Text(
-                //user.username,
+              // Text(
+              //   //user.username,
+              //   //userData['username'],
+              //   "@amy.smith123",
+              //   textAlign: TextAlign.left,
+              //   style: TextStyle(
+              //     fontSize: 15.0,
+              //     fontFamily: 'Gotham',
+              //     color: Color.fromARGB(255, 180, 179, 179),
+              //   ),
+              // ),
 
-                "@amy.smith123",
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                  fontSize: 15.0,
-                  fontFamily: 'Gotham',
-                  color: Color.fromARGB(255, 180, 179, 179),
-                ),
+              const SizedBox(
+                height: 12,
               ),
+
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  buildStatColumn(postLen, "muses"),
+                  buildStatColumnEmpty(0, "       "),
+                  buildStatColumn(followers, "followers"),
+                  buildStatColumnEmpty(0, "       "),
+                  buildStatColumn(following, "following"),
+                ],
+              ),
+
               const SizedBox(
                 height: 10,
               ),
-              // Padding(
-              //   padding: const EdgeInsets.fromLTRB(22, 0, 22, 10),
-              //   child: Container(
-              //     width: 277.0,
-              //     height: 53.0,
-              //     decoration: BoxDecoration(
-              //       color: Color.fromARGB(255, 42, 42, 42),
-              //       border: Border.all(
-              //         color: Color.fromARGB(255, 180, 179, 179),
-              //       ),
-              //       borderRadius: BorderRadius.circular(100),
-              //     ),
-              //     child: OutlinedButton(
-              //       child: const Text(
-              //         'View Monthly Breakdown',
-              //         textAlign: TextAlign.center,
-              //         style: TextStyle(
-              //           fontSize: 14.0,
-              //           fontFamily: 'Gotham',
-              //           color: Colors.white,
-              //         ),
-              //       ),
-              //       onPressed: () {
-              //         Navigator.push(
-              //             context,
-              //             MaterialPageRoute(
-              //                 builder: (context) => addFriends()));
-              //       },
-              //     ),
-              //   ),
-              // ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  // FollowButton(backgroundColor: Colors.black45, borderColor: Colors.grey, text: 'Edit Profile', textColor: Colors.white,
+                  // function: (){},),
+
+                  FirebaseAuth.instance.currentUser!.uid == widget.uid ?
+
+                  NewFollowButton(
+                    backgroundColor: Color.fromARGB(255, 42, 42, 42),
+                    borderColor: Color.fromARGB(255, 180, 179, 179),
+                    text: "Edit Profile",
+                    textColor: Colors.white,
+                    function: () {},
+                  ): isFollowing? 
+                                    NewFollowButton(
+                    backgroundColor: Colors.white,
+                    borderColor: Color.fromARGB(255, 180, 179, 179),
+                    text: "Unfollow",
+                    textColor: Colors.black87,
+                    function: () {},
+                  ):                   NewFollowButton(
+                    backgroundColor: Colors.deepPurpleAccent,
+                    borderColor: Colors.deepPurpleAccent,
+                    text: "Follow",
+                    textColor: Colors.white,
+                    function: () {},
+                  )
+                ],
+              ),
+
+              Padding(
+                padding: const EdgeInsets.fromLTRB(22, 0, 22, 10),
+                child: Container(
+                  width: 277.0,
+                  height: 53.0,
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 42, 42, 42),
+                    border: Border.all(
+                      color: Color.fromARGB(255, 180, 179, 179),
+                    ),
+                    borderRadius: BorderRadius.circular(100),
+                  ),
+                  child: OutlinedButton(
+                    child: const Text(
+                      'View Monthly Breakdown',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 14.0,
+                        fontFamily: 'Gotham',
+                        color: Colors.white,
+                      ),
+                    ),
+                    onPressed: () {
+                      // Navigator.push(
+                      //     context,
+                      //     MaterialPageRoute(
+                      //         builder: (context) => addFriends()));
+                    },
+                  ),
+                ),
+              ),
               const SizedBox(
                 height: 10,
               ),
@@ -204,13 +326,12 @@ class _MonthlyBreakdownState extends State<MonthlyBreakdown> {
                     Row(
                       children: [
                         Container(
-                            color: const Color.fromARGB(255, 42, 42, 42),
-                            )
+                          color: const Color.fromARGB(255, 42, 42, 42),
+                        )
                       ],
                     ),
                     Column(
-                                          children: const [AudioPlayerButtons()],
-
+                      children: const [AudioPlayerButtons()],
                     ),
                     // Padding(
                     //   padding: const EdgeInsets.fromLTRB(0, 25, 120, 0),
@@ -328,5 +449,56 @@ class _MonthlyBreakdownState extends State<MonthlyBreakdown> {
                 ),
               ),
             ]))));
+  }
+
+  Column buildStatColumn(int num, String label) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          num.toString(),
+          style: const TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        Container(
+          margin: const EdgeInsets.only(top: 1.5),
+          child: Text(
+            label,
+            style: const TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.w400,
+              color: Colors.grey,
+            ),
+          ),
+        )
+      ],
+    );
+  }
+
+  Column buildStatColumnEmpty(int num, String label) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        // Text(
+        //   num.toString(),
+        //   style: const TextStyle(
+        //     fontSize: 22,
+        //     fontWeight: FontWeight.bold,
+        //   ),
+        // ),
+        Text(
+          label,
+          style: const TextStyle(
+            fontSize: 15,
+            fontWeight: FontWeight.w400,
+            color: Colors.grey,
+          ),
+        ),
+      ],
+    );
   }
 }
