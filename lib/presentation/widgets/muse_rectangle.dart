@@ -11,14 +11,14 @@ import '../../providers/user_provider.dart';
 import '../../resources/firestore_methods.dart';
 import '../../utils/utils.dart';
 
-class AudioPlayerButtons extends StatefulWidget {
-  const AudioPlayerButtons({Key? key}) : super(key: key);
+class MuseRectangle extends StatefulWidget {
+  const MuseRectangle({Key? key}) : super(key: key);
 
   @override
-  State<AudioPlayerButtons> createState() => _AudioPlayerButtonsState();
+  State<MuseRectangle> createState() => _MuseRectangleState();
 }
 
-class _AudioPlayerButtonsState extends State<AudioPlayerButtons> {
+class _MuseRectangleState extends State<MuseRectangle> {
   @override
   void initState() {
     super.initState();
@@ -40,9 +40,9 @@ class _AudioPlayerButtonsState extends State<AudioPlayerButtons> {
     try {
       String res = await FireStoreMethods().uploadMyMuse(
         _descriptionController.text,
-        _artistName!,
-        _trackName!,
         _artworkUrl100!,
+        // _artistName!,
+        // _trackName!,
         uid,
         username,
         profImage,

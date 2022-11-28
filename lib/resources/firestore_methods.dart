@@ -11,7 +11,8 @@ import '../models/post.dart';
 class FireStoreMethods {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
-  Future<String> uploadMyMuse(String description, String file, String uid,
+
+  Future<String> uploadMyMuse(String description, String musician, String songTitle, String file, String uid,
       String username, String profImage) async {
     // asking uid here because we dont want to make extra calls to firebase auth when we can just get from our state management
     String res = "Some error occurred";
@@ -19,10 +20,13 @@ class FireStoreMethods {
       String photoUrl =
       await StorageMethodsNew().uploadMuseToStorage('muses', file, true);
 
+
       String postId = const Uuid().v1();
 
       Post post = Post(
         description: description,
+        musician: musician, 
+        songTitle: songTitle,
         uid: uid,
         username: username,
         likes: [],
@@ -39,4 +43,36 @@ class FireStoreMethods {
     }
     return res;
   }
+
+
+Future<void> followUser(
+  String uid,
+  String followId
+) async {
+  try {
+      DocumentSnapshot snap = await _firestore.collection('users').doc(uid).get();
+      List following = (snap.data()! as dynamic)['following'];
+
+      if(following.contains(followId)) {
+        await _firestore.collection('users').doc(followId).update({
+          'followers': FieldValue.arrayRemove([uid])
+        });
+
+        await _firestore.collection('users').doc(uid).update({
+          'following': FieldValue.arrayRemove([followId])
+        });
+      } else {
+        await _firestore.collection('users').doc(followId).update({
+          'followers': FieldValue.arrayUnion([uid])
+        });
+
+        await _firestore.collection('users').doc(uid).update({
+          'following': FieldValue.arrayUnion([followId])
+        });
+      }
+
+  } catch(e) {
+    print(e.toString());
+  }
+}
 }

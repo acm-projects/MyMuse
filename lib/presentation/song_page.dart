@@ -33,7 +33,7 @@ class SongPage extends StatelessWidget {
                   builder: (context, state) => state.status.when(
                     initial: () => const EmptyWidget(
                       key: Key('__initial__'),
-                      text: 'Start a search!',
+                      text: 'Find your muse!',
                     ),
                     loading: () => const Center(
                       child: CircularProgressIndicator(

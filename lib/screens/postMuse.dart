@@ -24,6 +24,8 @@ class _AddPostScreenState extends State<AddPostScreen> {
   final TextEditingController _descriptionController = TextEditingController();
   String? _artworkUrl100 =
       'https://upload.wikimedia.org/wikipedia/en/9/9f/Midnights_-_Taylor_Swift.png';
+  String? _artistName = "Taylor Swift";
+  String? _trackName = "Anti-Hero";
   bool _isLoading = false;
 
   //String? _artworkUrl100;
@@ -43,6 +45,8 @@ class _AddPostScreenState extends State<AddPostScreen> {
     try {
       String res = await FireStoreMethods().uploadMyMuse(
         _descriptionController.text,
+        _artistName!,
+        _trackName!,
         _artworkUrl100!,
         uid,
         username,
