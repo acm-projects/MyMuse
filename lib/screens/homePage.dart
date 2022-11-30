@@ -140,7 +140,7 @@ class _homePageState extends State<homePage> {
                               width: MediaQuery.of(context).size.width * 0.93,
                               //height: MediaQuery.of(context).size.height * 0.93,
                               child: Text(
-                                'i love this song!',
+                                'you need to listen to this',
                                 //textAlign: TextAlign.left,
                                 style: TextStyle(
                                   fontSize: 16.0,
@@ -174,9 +174,7 @@ class _homePageState extends State<homePage> {
                         //       ],
                         //     ),
 
-                  noFriendsAdded
-                      ? Row()
-                      : Column(children: [
+                  Column(children: [
                           const SizedBox(
                             height: 15,
                           ),
@@ -202,13 +200,13 @@ class _homePageState extends State<homePage> {
                                               255, 42, 42, 42),
                                           child: Container(
                                             width: 344,
-                                            height: 60,
+                                            height: 49,
                                             decoration: const BoxDecoration(
                                               //borderRadius: BorderRadius.circular(200),
                                               image: DecorationImage(
                                                 alignment: Alignment(-.95, 0),
                                                 image: AssetImage(
-                                                    'assets/FakeProfileSmall.png'),
+                                                    'assets/faiza.png'),
                                               ),
                                             ),
                                             child: Column(children: const [
@@ -219,7 +217,7 @@ class _homePageState extends State<homePage> {
                                                     height: 20,
                                                     width: 300,
                                                     child: Text(
-                                                      "mangotreev2",
+                                                      "faiza",
                                                       textAlign: TextAlign.left,
                                                       style: TextStyle(
                                                         fontSize: 18.0,
@@ -256,6 +254,8 @@ class _homePageState extends State<homePage> {
                                         ))
                                   ],
                                 ),
+                                SizedBox(
+                                                    height: 8),
                         ]),
 
                   noFriendsAdded
@@ -264,7 +264,7 @@ class _homePageState extends State<homePage> {
                             height: 20,
                             width: 300,
                             child: Text(
-                              "I am Taylor's #1 Fan!!!",
+                              "in my red era",
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                 fontSize: 16.0,
@@ -287,7 +287,7 @@ class _homePageState extends State<homePage> {
                               //border: Border.all(width: 5),
                               borderRadius: BorderRadius.circular(20),
                               image: DecorationImage(
-                                image: AssetImage('assets/Taylor.png'),
+                                image: NetworkImage('https://upload.wikimedia.org/wikipedia/en/9/9f/Midnights_-_Taylor_Swift.png'),
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -316,7 +316,7 @@ class _homePageState extends State<homePage> {
                                             height: 32,
                                             width: 350,
                                             child: Text(
-                                              "...Ready For it?",
+                                              "Maroon",
                                               textAlign: TextAlign.left,
                                               style: TextStyle(
                                                 fontSize: 29.0,
@@ -402,6 +402,897 @@ class _homePageState extends State<homePage> {
                             ),
                           ]),
                         ]),
+
+                                 SizedBox(
+                                            height: 14,
+                                            width: 300,),
+            
+
+              // OUR PROFILES!!!!
+
+                        Row(
+                                  children: [
+                                    Container(
+                                        color: const Color.fromARGB(
+                                            255, 42, 42, 42),
+                                        margin: const EdgeInsets.fromLTRB(
+                                            22.5, 10, 0, 0),
+                                        child: InkWell(
+                                          borderRadius:
+                                              BorderRadius.circular(30),
+                                          splashColor: const Color.fromARGB(
+                                              255, 42, 42, 42),
+                                          child: Container(
+                                            width: 344,
+                                            height: 49,
+                                            decoration: const BoxDecoration(
+                                              //borderRadius: BorderRadius.circular(200),
+                                              image: DecorationImage(
+                                                alignment: Alignment(-.95, 0),
+                                                image: AssetImage(
+                                                    'assets/dheeptha.png'),
+                                              ),
+                                            ),
+                                            child: Column(children: const [
+                                              Padding(
+                                                  padding: EdgeInsets.fromLTRB(
+                                                      65, 12, 0, 0),
+                                                  child: SizedBox(
+                                                    height: 20,
+                                                    width: 300,
+                                                    child: Text(
+                                                      "dheepdheep",
+                                                      textAlign: TextAlign.left,
+                                                      style: TextStyle(
+                                                        fontSize: 18.0,
+                                                        fontFamily: 'Gotham',
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
+                                                  )),
+                                              Padding(
+                                                padding: EdgeInsets.fromLTRB(
+                                                    65, 2, 0, 1),
+                                                child: SizedBox(
+                                                    height: 14,
+                                                    width: 300,
+                                                    child: Text(
+                                                      "10 minutes ago",
+                                                      textAlign: TextAlign.left,
+                                                      style: TextStyle(
+                                                        fontSize: 12.0,
+                                                        fontFamily: 'Gotham',
+                                                        color: Color.fromARGB(
+                                                            255, 125, 125, 125),
+                                                      ),
+                                                    )),
+                                              ),
+                                            ]),
+                                          ),
+                                          onTap: () {
+                                            /*Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => friendProfile()));*/
+                                          },
+                                        ))
+                                  ],
+                                ),
+
+                                                               SizedBox(
+                                                    height: 8),
+
+                                SizedBox(
+                            height: 20,
+                            width: 300,
+                            child: Text(
+                              "on repeattt",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                fontFamily: 'Gotham',
+                                color: Colors.grey.shade100,
+                              ),
+                            ),
+                          ),
+
+                          Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 14, 0, 0),
+                          
+
+                          child: Container(
+                            height: 330,
+                            width: 330,
+                            decoration: BoxDecoration(
+                              //border: Border.all(width: 5),
+                              borderRadius: BorderRadius.circular(20),
+                              image: DecorationImage(
+                                image: NetworkImage('https://upload.wikimedia.org/wikipedia/en/2/2b/B.I_Waterfall_Album_Cover.jpg'),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                        ),
+
+                        Column(children: [
+                          Row(children: [
+                            Container(
+                                color: const Color.fromARGB(255, 42, 42, 42),
+                                margin:
+                                    const EdgeInsets.fromLTRB(22.5, 0, 0, 0),
+                                child: InkWell(
+                                  borderRadius: BorderRadius.circular(30),
+                                  splashColor:
+                                      const Color.fromARGB(255, 42, 42, 42),
+                                  child: SizedBox(
+                                    width: 230,
+                                    height: 60,
+                                    child: Column(children: const [
+                                      Padding(
+                                          padding:
+                                              EdgeInsets.fromLTRB(10, 11, 0, 0),
+                                          child: SizedBox(
+                                            height: 32,
+                                            width: 350,
+                                            child: Text(
+                                              "Waterfall",
+                                              textAlign: TextAlign.left,
+                                              style: TextStyle(
+                                                fontSize: 29.0,
+                                                fontFamily: 'Gotham',
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          )),
+                                      Padding(
+                                        padding:
+                                            EdgeInsets.fromLTRB(10, 2, 0, 1),
+                                        child: SizedBox(
+                                            height: 14,
+                                            width: 300,
+                                            child: Text(
+                                              "B.I.",
+                                              textAlign: TextAlign.left,
+                                              style: TextStyle(
+                                                fontSize: 14.0,
+                                                fontFamily: 'Gotham',
+                                                color: Color.fromARGB(
+                                                    255, 180, 179, 179),
+                                              ),
+                                            )),
+                                      ),
+                                    ]),
+                                    
+                                  ),
+
+                                  
+                                  onTap: () {
+                                    /*Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => friendProfile()));*/
+                                  },
+                                )),
+                                
+                            Column(
+                              children: [
+                                Padding(
+                                    padding:
+                                        const EdgeInsets.fromLTRB(30, 0, 0, 0),
+                                    child: SizedBox(
+                                      width: 40,
+                                      height: 40,
+                                      child: TextButton(
+                                          onPressed: () {
+                                            setState(() {
+                                              default_heart =
+                                                  'assets/HeartPurple.png';
+                                            });
+                                          },
+                                          child: Image.asset(default_heart)),
+                                    ))
+                              ],
+                            ),
+                            Column(
+                              children: [
+                                Padding(
+                                    padding:
+                                        const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                    child: SizedBox(
+                                      width: 40,
+                                      height: 40,
+                                      child: TextButton(
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      comments()));
+                                        },
+                                        child: Container(
+                                          height: 30,
+                                          width: 30,
+                                          decoration: const BoxDecoration(
+                                            image: DecorationImage(
+                                              image: AssetImage(
+                                                  'assets/Comment.png'),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ))
+                              ],
+                            ),
+                          ]),
+                        ]),
+
+                        SizedBox(
+                                            height: 14,
+                                            width: 300,),
+
+// OUR PROFILES!!!!
+
+                        Row(
+                                  children: [
+                                    Container(
+                                        color: const Color.fromARGB(
+                                            255, 42, 42, 42),
+                                        margin: const EdgeInsets.fromLTRB(
+                                            22.5, 10, 0, 0),
+                                        child: InkWell(
+                                          borderRadius:
+                                              BorderRadius.circular(30),
+                                          splashColor: const Color.fromARGB(
+                                              255, 42, 42, 42),
+                                          child: Container(
+                                            width: 360,
+                                            height: 49,
+                                            decoration: const BoxDecoration(
+                                              //borderRadius: BorderRadius.circular(200),
+                                              image: DecorationImage(
+                                                alignment: Alignment(-.95, 0),
+                                                image: AssetImage(
+                                                    'assets/max.png'),
+                                              ),
+                                            ),
+                                            child: Column(children: const [
+                                              Padding(
+                                                  padding: EdgeInsets.fromLTRB(
+                                                      65, 12, 0, 0),
+                                                  child: SizedBox(
+                                                    height: 20,
+                                                    width: 300,
+                                                    child: Text(
+                                                      "iammaxlichter",
+                                                      textAlign: TextAlign.left,
+                                                      style: TextStyle(
+                                                        fontSize: 18.0,
+                                                        fontFamily: 'Gotham',
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
+                                                  )),
+                                              Padding(
+                                                padding: EdgeInsets.fromLTRB(
+                                                    65, 2, 0, 1),
+                                                child: SizedBox(
+                                                    height: 14,
+                                                    width: 300,
+                                                    child: Text(
+                                                      "19 minutes ago",
+                                                      textAlign: TextAlign.left,
+                                                      style: TextStyle(
+                                                        fontSize: 12.0,
+                                                        fontFamily: 'Gotham',
+                                                        color: Color.fromARGB(
+                                                            255, 125, 125, 125),
+                                                      ),
+                                                    )),
+                                              ),
+                                            ]),
+                                          ),
+                                          onTap: () {
+                                            /*Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => friendProfile()));*/
+                                          },
+                                        ))
+                                  ],
+                                ),
+                                SizedBox(
+                                                    height: 8),
+
+                                SizedBox(
+                            height: 20,
+                            width: 300,
+                            child: Text(
+                              "this song makes me feel like there",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                fontFamily: 'Gotham',
+                                color: Colors.grey.shade100,
+                              ),
+                            ),
+                          ),
+                             SizedBox(
+                            height: 20,
+                            width: 300,
+                            child: Text(
+                              "are bugs in my skins!",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                fontFamily: 'Gotham',
+                                color: Colors.grey.shade100,
+                              ),
+                            ),
+                          ),
+
+                          Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 14, 0, 0),
+                          
+
+                          child: Container(
+                            height: 330,
+                            width: 330,
+                            decoration: BoxDecoration(
+                              //border: Border.all(width: 5),
+                              borderRadius: BorderRadius.circular(20),
+                              image: DecorationImage(
+                                image: NetworkImage('https://images.genius.com/a094a04de52f3c9465a5819ee5e6d1e6.1000x1000x1.jpg'),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                        ),
+
+                        Column(children: [
+                          Row(children: [
+                            Container(
+                                color: const Color.fromARGB(255, 42, 42, 42),
+                                margin:
+                                    const EdgeInsets.fromLTRB(22.5, 0, 0, 0),
+                                child: InkWell(
+                                  borderRadius: BorderRadius.circular(30),
+                                  splashColor:
+                                      const Color.fromARGB(255, 42, 42, 42),
+                                  child: SizedBox(
+                                    width: 230,
+                                    height: 60,
+                                    child: Column(children: const [
+                                      Padding(
+                                          padding:
+                                              EdgeInsets.fromLTRB(10, 11, 0, 0),
+                                          child: SizedBox(
+                                            height: 32,
+                                            width: 350,
+                                            child: Text(
+                                              "21",
+                                              textAlign: TextAlign.left,
+                                              style: TextStyle(
+                                                fontSize: 29.0,
+                                                fontFamily: 'Gotham',
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          )),
+                                      Padding(
+                                        padding:
+                                            EdgeInsets.fromLTRB(10, 2, 0, 1),
+                                        child: SizedBox(
+                                            height: 14,
+                                            width: 300,
+                                            child: Text(
+                                              "Gracie Abrams",
+                                              textAlign: TextAlign.left,
+                                              style: TextStyle(
+                                                fontSize: 14.0,
+                                                fontFamily: 'Gotham',
+                                                color: Color.fromARGB(
+                                                    255, 180, 179, 179),
+                                              ),
+                                            )),
+                                      ),
+                                    ]),
+                                  ),
+                                  onTap: () {
+                                    /*Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => friendProfile()));*/
+                                  },
+                                )),
+                            Column(
+                              children: [
+                                Padding(
+                                    padding:
+                                        const EdgeInsets.fromLTRB(30, 0, 0, 0),
+                                    child: SizedBox(
+                                      width: 40,
+                                      height: 40,
+                                      child: TextButton(
+                                          onPressed: () {
+                                            setState(() {
+                                              default_heart =
+                                                  'assets/HeartPurple.png';
+                                            });
+                                          },
+                                          child: Image.asset(default_heart)),
+                                    ))
+                              ],
+                            ),
+                            Column(
+                              children: [
+                                Padding(
+                                    padding:
+                                        const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                    child: SizedBox(
+                                      width: 40,
+                                      height: 40,
+                                      child: TextButton(
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      comments()));
+                                        },
+                                        child: Container(
+                                          height: 30,
+                                          width: 30,
+                                          decoration: const BoxDecoration(
+                                            image: DecorationImage(
+                                              image: AssetImage(
+                                                  'assets/Comment.png'),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ))
+                              ],
+                            ),
+                          ]),
+                        ]),
+
+                        SizedBox(
+                                            height: 14,
+                                            width: 300,),
+
+// OUR PROFILES!!!!
+
+                        Row(
+                                  children: [
+                                    Container(
+                                        color: const Color.fromARGB(
+                                            255, 42, 42, 42),
+                                        margin: const EdgeInsets.fromLTRB(
+                                            22.5, 10, 0, 0),
+                                        child: InkWell(
+                                          borderRadius:
+                                              BorderRadius.circular(30),
+                                          splashColor: const Color.fromARGB(
+                                              255, 42, 42, 42),
+                                          child: Container(
+                                            width: 344,
+                                            height: 49,
+                                            decoration: const BoxDecoration(
+                                              //borderRadius: BorderRadius.circular(200),
+                                              image: DecorationImage(
+                                                alignment: Alignment(-.95, 0),
+                                                image: AssetImage(
+                                                    'assets/mani.png'),
+                                              ),
+                                            ),
+                                            child: Column(children: const [
+                                              Padding(
+                                                  padding: EdgeInsets.fromLTRB(
+                                                      65, 12, 0, 0),
+                                                  child: SizedBox(
+                                                    height: 20,
+                                                    width: 300,
+                                                    child: Text(
+                                                      "manasivipat",
+                                                      textAlign: TextAlign.left,
+                                                      style: TextStyle(
+                                                        fontSize: 18.0,
+                                                        fontFamily: 'Gotham',
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
+                                                  )),
+                                              Padding(
+                                                padding: EdgeInsets.fromLTRB(
+                                                    65, 2, 0, 1),
+                                                child: SizedBox(
+                                                    height: 14,
+                                                    width: 300,
+                                                    child: Text(
+                                                      "28 minutes ago",
+                                                      textAlign: TextAlign.left,
+                                                      style: TextStyle(
+                                                        fontSize: 12.0,
+                                                        fontFamily: 'Gotham',
+                                                        color: Color.fromARGB(
+                                                            255, 125, 125, 125),
+                                                      ),
+                                                    )),
+                                              ),
+                                            ]),
+                                          ),
+                                          onTap: () {
+                                            /*Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => friendProfile()));*/
+                                          },
+                                        ))
+                                  ],
+                                ),
+                                 SizedBox(
+                                                    height: 8),
+
+                                SizedBox(
+                            height: 20,
+                            width: 300,
+                            child: Text(
+                              "current fave",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                fontFamily: 'Gotham',
+                                color: Colors.grey.shade100,
+                              ),
+                            ),
+                          ),
+
+                          Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 14, 0, 0),
+                          
+
+                          child: Container(
+                            height: 330,
+                            width: 330,
+                            decoration: BoxDecoration(
+                              //border: Border.all(width: 5),
+                              borderRadius: BorderRadius.circular(20),
+                              image: DecorationImage(
+                                image: NetworkImage('https://i.scdn.co/image/ab67616d0000b2731be160c998dd52e1a7df74e4'),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                        ),
+
+                        Column(children: [
+                          Row(children: [
+                            Container(
+                                color: const Color.fromARGB(255, 42, 42, 42),
+                                margin:
+                                    const EdgeInsets.fromLTRB(22.5, 0, 0, 0),
+                                child: InkWell(
+                                  borderRadius: BorderRadius.circular(30),
+                                  splashColor:
+                                      const Color.fromARGB(255, 42, 42, 42),
+                                  child: SizedBox(
+                                    width: 230,
+                                    height: 60,
+                                    child: Column(children: const [
+                                      Padding(
+                                          padding:
+                                              EdgeInsets.fromLTRB(10, 11, 0, 0),
+                                          child: SizedBox(
+                                            height: 32,
+                                            width: 350,
+                                            child: Text(
+                                              "Close The Door",
+                                              textAlign: TextAlign.left,
+                                              style: TextStyle(
+                                                fontSize: 28.0,
+                                                fontFamily: 'Gotham',
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          )),
+                                      Padding(
+                                        padding:
+                                            EdgeInsets.fromLTRB(10, 2, 0, 1),
+                                        child: SizedBox(
+                                            height: 14,
+                                            width: 300,
+                                            child: Text(
+                                              "Weston Estate",
+                                              textAlign: TextAlign.left,
+                                              style: TextStyle(
+                                                fontSize: 14.0,
+                                                fontFamily: 'Gotham',
+                                                color: Color.fromARGB(
+                                                    255, 180, 179, 179),
+                                              ),
+                                            )),
+                                      ),
+                                    ]),
+                                  ),
+                                  onTap: () {
+                                    /*Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => friendProfile()));*/
+                                  },
+                                )),
+                            Column(
+                              children: [
+                                Padding(
+                                    padding:
+                                        const EdgeInsets.fromLTRB(30, 0, 0, 0),
+                                    child: SizedBox(
+                                      width: 40,
+                                      height: 40,
+                                      child: TextButton(
+                                          onPressed: () {
+                                            setState(() {
+                                              default_heart =
+                                                  'assets/HeartPurple.png';
+                                            });
+                                          },
+                                          child: Image.asset(default_heart)),
+                                    ))
+                              ],
+                            ),
+                            Column(
+                              children: [
+                                Padding(
+                                    padding:
+                                        const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                    child: SizedBox(
+                                      width: 40,
+                                      height: 40,
+                                      child: TextButton(
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      comments()));
+                                        },
+                                        child: Container(
+                                          height: 30,
+                                          width: 30,
+                                          decoration: const BoxDecoration(
+                                            image: DecorationImage(
+                                              image: AssetImage(
+                                                  'assets/Comment.png'),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ))
+                              ],
+                            ),
+                          ]),
+                        ]),
+
+                        SizedBox(
+                                            height: 14,
+                                            width: 300,),
+
+                        // OUR PROFILES!!!!
+
+                        Row(
+                                  children: [
+                                    Container(
+                                        color: const Color.fromARGB(
+                                            255, 42, 42, 42),
+                                        margin: const EdgeInsets.fromLTRB(
+                                            22.5, 10, 0, 0),
+                                        child: InkWell(
+                                          borderRadius:
+                                              BorderRadius.circular(30),
+                                          splashColor: const Color.fromARGB(
+                                              255, 42, 42, 42),
+                                          child: Container(
+                                            width: 344,
+                                            height: 49,
+                                            decoration: const BoxDecoration(
+                                              //borderRadius: BorderRadius.circular(200),
+                                              image: DecorationImage(
+                                                alignment: Alignment(-.95, 0),
+                                                image: AssetImage(
+                                                    'assets/eman.png'),
+                                              ),
+                                            ),
+                                            child: Column(children: const [
+                                              Padding(
+                                                  padding: EdgeInsets.fromLTRB(
+                                                      65, 12, 0, 0),
+                                                  child: SizedBox(
+                                                    height: 20,
+                                                    width: 300,
+                                                    child: Text(
+                                                      "emanananana",
+                                                      textAlign: TextAlign.left,
+                                                      style: TextStyle(
+                                                        fontSize: 18.0,
+                                                        fontFamily: 'Gotham',
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
+                                                  )),
+                                              Padding(
+                                                padding: EdgeInsets.fromLTRB(
+                                                    65, 2, 0, 1),
+                                                child: SizedBox(
+                                                    height: 14,
+                                                    width: 300,
+                                                    child: Text(
+                                                      "36 minutes ago",
+                                                      textAlign: TextAlign.left,
+                                                      style: TextStyle(
+                                                        fontSize: 12.0,
+                                                        fontFamily: 'Gotham',
+                                                        color: Color.fromARGB(
+                                                            255, 125, 125, 125),
+                                                      ),
+                                                    )),
+                                              ),
+                                            ]),
+                                          ),
+                                          onTap: () {
+                                            /*Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => friendProfile()));*/
+                                          },
+                                        ))
+                                  ],
+                                ),
+
+                                 SizedBox(
+                                                    height: 8),
+
+                                SizedBox(
+                            height: 20,
+                            width: 300,
+                            child: Text(
+                              "pharb 4 life",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                fontFamily: 'Gotham',
+                                color: Colors.grey.shade100,
+                              ),
+                            ),
+                          ),
+
+                          Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 14, 0, 0),
+                          
+
+                          child: Container(
+                            height: 330,
+                            width: 330,
+                            decoration: BoxDecoration(
+                              //border: Border.all(width: 5),
+                              borderRadius: BorderRadius.circular(20),
+                              image: DecorationImage(
+                                image: NetworkImage('https://ourculturemag.com/wp-content/uploads/2020/08/333B7425-1-scaled.jpg'),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                        ),
+
+                        Column(children: [
+                          Row(children: [
+                            Container(
+                                color: const Color.fromARGB(255, 42, 42, 42),
+                                margin:
+                                    const EdgeInsets.fromLTRB(22.5, 0, 0, 0),
+                                child: InkWell(
+                                  borderRadius: BorderRadius.circular(30),
+                                  splashColor:
+                                      const Color.fromARGB(255, 42, 42, 42),
+                                  child: SizedBox(
+                                    width: 230,
+                                    height: 60,
+                                    child: Column(children: const [
+                                      Padding(
+                                          padding:
+                                              EdgeInsets.fromLTRB(10, 11, 0, 0),
+                                          child: SizedBox(
+                                            height: 32,
+                                            width: 350,
+                                            child: Text(
+                                              "I Know The End",
+                                              textAlign: TextAlign.left,
+                                              style: TextStyle(
+                                                fontSize: 27.0,
+                                                fontFamily: 'Gotham',
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          )),
+                                      Padding(
+                                        padding:
+                                            EdgeInsets.fromLTRB(10, 2, 0, 1),
+                                        child: SizedBox(
+                                            height: 14,
+                                            width: 300,
+                                            child: Text(
+                                              "Phoebe Bridgers",
+                                              textAlign: TextAlign.left,
+                                              style: TextStyle(
+                                                fontSize: 14.0,
+                                                fontFamily: 'Gotham',
+                                                color: Color.fromARGB(
+                                                    255, 180, 179, 179),
+                                              ),
+                                            )),
+                                      ),
+                                    ]),
+                                  ),
+                                  onTap: () {
+                                    /*Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => friendProfile()));*/
+                                  },
+                                )),
+                            Column(
+                              children: [
+                                Padding(
+                                    padding:
+                                        const EdgeInsets.fromLTRB(30, 0, 0, 0),
+                                    child: SizedBox(
+                                      width: 40,
+                                      height: 40,
+                                      child: TextButton(
+                                          onPressed: () {
+                                            setState(() {
+                                              default_heart =
+                                                  'assets/HeartPurple.png';
+                                            });
+                                          },
+                                          child: Image.asset(default_heart)),
+                                    ))
+                              ],
+                            ),
+                            Column(
+                              children: [
+                                Padding(
+                                    padding:
+                                        const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                    child: SizedBox(
+                                      width: 40,
+                                      height: 40,
+                                      child: TextButton(
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      comments()));
+                                        },
+                                        child: Container(
+                                          height: 30,
+                                          width: 30,
+                                          decoration: const BoxDecoration(
+                                            image: DecorationImage(
+                                              image: AssetImage(
+                                                  'assets/Comment.png'),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ))
+                              ],
+                            ),
+                          ]),
+                        ]),
+
+
+
 
                   // Row(
                   //   children: [

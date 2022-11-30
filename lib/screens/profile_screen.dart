@@ -262,30 +262,28 @@ class _MonthlyBreakdownState extends State<MonthlyBreakdown> {
                                         FirebaseAuth.instance.currentUser!.uid,
                                         userData['uid']);
 
-                                        setState(() {
-                                          isFollowing = false;
-                                          followers--;
-                                        });
-
+                                    setState(() {
+                                      isFollowing = false;
+                                      followers--;
+                                    });
                                   },
                                 )
                               : NewFollowButton(
-                                  backgroundColor: Colors.deepPurpleAccent,
-                                  borderColor: Colors.deepPurpleAccent,
+                                  backgroundColor: Color.fromARGB(255, 150, 52, 200),
+                                  borderColor: Color.fromARGB(255, 150, 52, 200),
                                   text: "Follow",
                                   textColor: Colors.white,
                                   function: () async {
                                     await FireStoreMethods().followUser(
                                         FirebaseAuth.instance.currentUser!.uid,
                                         userData['uid']);
-                                        
-                                        setState(() {
-                                          isFollowing = true;
-                                          followers++;
-                                        });
 
-                                        noFriendsAdded = false;
+                                    setState(() {
+                                      isFollowing = true;
+                                      followers++;
+                                    });
 
+                                    noFriendsAdded = false;
                                   },
                                 )
                     ],
@@ -453,13 +451,16 @@ class _MonthlyBreakdownState extends State<MonthlyBreakdown> {
                     ),
                   )),
 
+
+                      FirebaseAuth.instance.currentUser!.uid == widget.uid ?
+
                   Padding(
                     padding: const EdgeInsets.fromLTRB(22, 15, 22, 20),
                     child: Container(
                       width: 150.0,
                       height: 50.0,
                       decoration: BoxDecoration(
-                        color: Colors.deepPurpleAccent[400],
+                        color: const Color.fromARGB(255, 150, 52, 200),
                         borderRadius: BorderRadius.circular(30),
                       ),
                       child: OutlinedButton(
@@ -483,7 +484,10 @@ class _MonthlyBreakdownState extends State<MonthlyBreakdown> {
                         },
                       ),
                     ),
-                  ),
+                  ) :
+
+                  SizedBox(height: 1),
+
                 ]))));
   }
 

@@ -60,12 +60,12 @@ class comments extends StatelessWidget {
                           splashColor: const Color.fromARGB(255, 42, 42, 42),
                           child: Container(
                             width: 344,
-                            height: 60,
+                            height: 49,
                             decoration: const BoxDecoration(
                               image: DecorationImage(
                                 alignment: Alignment(-.95, 0),
                                 image: AssetImage(
-                                    'assets/FakePersonalProfileSmall.png'),
+                                    'assets/faiza.png'),
                               ),
                             ),
                             child: Column(children: const [
@@ -75,7 +75,7 @@ class comments extends StatelessWidget {
                                     height: 20,
                                     width: 300,
                                     child: Text(
-                                      "Amy Smith",
+                                      "faiza_rahman",
                                       textAlign: TextAlign.left,
                                       style: TextStyle(
                                         fontSize: 18.0,
@@ -111,6 +111,9 @@ class comments extends StatelessWidget {
                         ))
                   ],
                 ),
+
+                const SizedBox(height: 14),
+
                 Row(
                   children: [
                     Card(
@@ -123,10 +126,20 @@ class comments extends StatelessWidget {
                           child: Container(
                             width: 344,
                             height: 63,
-                            decoration: const BoxDecoration(
+                            // decoration: const BoxDecoration(
+                            //   image: DecorationImage(
+                            //     alignment: Alignment(-.95, 0),
+                            //     image: AssetImage('assets/FakeAlbum.png'),
+                            //   ),
+                            // ),
+                            decoration: BoxDecoration(
+                              //border: Border.all(width: 5),
+                              borderRadius: BorderRadius.circular(500),
                               image: DecorationImage(
-                                alignment: Alignment(-.95, 0),
-                                image: AssetImage('assets/FakeAlbum.png'),
+                               alignment: Alignment(-.95, 0),
+
+                                image: NetworkImage('https://upload.wikimedia.org/wikipedia/en/9/9f/Midnights_-_Taylor_Swift.png'),
+                               // fit: BoxFit.cover,
                               ),
                             ),
                             child: Column(children: const [
@@ -136,7 +149,7 @@ class comments extends StatelessWidget {
                                     height: 20,
                                     width: 300,
                                     child: Text(
-                                      "As It Is",
+                                      "Maroon",
                                       textAlign: TextAlign.left,
                                       style: TextStyle(
                                         fontSize: 18.0,
@@ -151,7 +164,7 @@ class comments extends StatelessWidget {
                                     height: 14,
                                     width: 300,
                                     child: Text(
-                                      "Harry Styles",
+                                      "Taylor Swift",
                                       textAlign: TextAlign.left,
                                       style: TextStyle(
                                         fontSize: 12.0,
@@ -190,7 +203,7 @@ class comments extends StatelessWidget {
                           decoration: const BoxDecoration(
                             image: DecorationImage(
                               alignment: Alignment(-.95, -.65),
-                              image: AssetImage('assets/FakeFriendProfile.png'),
+                              image: AssetImage('assets/max.png'),
                             ),
                           ),
                           child: Column(children: [
@@ -202,7 +215,7 @@ class comments extends StatelessWidget {
                                       height: 20,
                                       width: 190,
                                       child: Text(
-                                        "John Jones",
+                                        "iammaxlichter",
                                         textAlign: TextAlign.left,
                                         style: TextStyle(
                                           fontSize: 18.0,
@@ -250,7 +263,7 @@ class comments extends StatelessWidget {
                                   height: 45,
                                   width: 350,
                                   child: Text(
-                                    "I don't know what t hdahi dwiha ihwd j w jod  jowt hdahi dwiha ihwd j w jod  jowt hdahi dwiha ihwd j w jod  jowt hdahi dwiha ihwd j w jod  jowt hdahi dwiha ihwd j w jod  jow ",
+                                    "i love this song! ",
                                     textAlign: TextAlign.left,
                                     style: TextStyle(
                                       fontSize: 12.0,
@@ -270,6 +283,11 @@ class comments extends StatelessWidget {
                       ))
                 ],
               ),
+
+
+
+
+              
               Row(
                 children: [
                   Container(
@@ -296,7 +314,7 @@ class comments extends StatelessWidget {
                                       height: 20,
                                       width: 190,
                                       child: Text(
-                                        "John Jones",
+                                        "manasivipat",
                                         textAlign: TextAlign.left,
                                         style: TextStyle(
                                           fontSize: 18.0,
@@ -475,73 +493,7 @@ class comments extends StatelessWidget {
                               image: AssetImage('assets/FakeFriendProfile.png'),
                             ),
                           ),
-                          child: Column(children: [
-                            Row(
-                              children: [
-                                const Padding(
-                                    padding: EdgeInsets.fromLTRB(65, 0, 0, 0),
-                                    child: SizedBox(
-                                      height: 20,
-                                      width: 155,
-                                      child: Text(
-                                        "Amy Smith",
-                                        textAlign: TextAlign.left,
-                                        style: TextStyle(
-                                          fontSize: 18.0,
-                                          fontFamily: 'Gotham',
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                    )),
-                                const Text(
-                                  "1 hour",
-                                  textAlign: TextAlign.end,
-                                  style: TextStyle(
-                                    fontSize: 12.0,
-                                    fontFamily: 'Gotham',
-                                    color: Color.fromARGB(255, 175, 175, 175),
-                                  ),
-                                ),
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                  child: TextButton(
-                                    onPressed: () {
-                                      /*Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  homePage()));*/
-                                    },
-                                    child: const Text(
-                                      "Reply",
-                                      textAlign: TextAlign.left,
-                                      style: TextStyle(
-                                        fontSize: 12.0,
-                                        fontFamily: 'Gotham',
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                            const Padding(
-                              padding: EdgeInsets.fromLTRB(65, 0, 20, 1),
-                              child: SizedBox(
-                                  height: 45,
-                                  width: 350,
-                                  child: Text(
-                                    "wd j w jod  jowt hdiha ihwd j w jod  jowt hdahi dwiha ihwd j w jod  jow ",
-                                    textAlign: TextAlign.left,
-                                    style: TextStyle(
-                                      fontSize: 12.0,
-                                      fontFamily: 'Gotham',
-                                      color: Color.fromARGB(255, 255, 255, 255),
-                                    ),
-                                  )),
-                            ),
-                          ]),
+                          
                         ),
                         onTap: () {
                           /*Navigator.push(

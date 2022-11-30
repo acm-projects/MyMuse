@@ -62,21 +62,21 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home,
-            color: _page == 0 ? Colors.deepPurpleAccent : Colors.grey),
+            color: _page == 0 ? const Color.fromARGB(255, 150, 52, 200) : Colors.grey),
             label: '',
-            backgroundColor: Colors.deepPurpleAccent,
+            backgroundColor: const Color.fromARGB(255, 150, 52, 200),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.search,
-            color: _page == 1 ? Colors.deepPurpleAccent : Colors.grey),
+            color: _page == 1 ? const Color.fromARGB(255, 150, 52, 200) : Colors.grey),
             label: '',
-            backgroundColor: Colors.deepPurpleAccent,
+            backgroundColor: const Color.fromARGB(255, 150, 52, 200),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person,
-            color: _page == 2 ? Colors.deepPurpleAccent : Colors.grey),
+            color: _page == 2 ? const Color.fromARGB(255, 150, 52, 200) : Colors.grey),
             label: '',
-            backgroundColor: Colors.deepPurpleAccent,
+            backgroundColor: const Color.fromARGB(255, 150, 52, 200),
           ),
         ],
         onTap: navigationTapped,
