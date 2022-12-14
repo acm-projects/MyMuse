@@ -127,17 +127,4 @@ this is some different code
 3. Do this for every file in the list
 4. Commit those changes
 
-hello i am max lichter i am 19
-i am a sophomore and i like coding
-i love snakes
-=======
-hello i am max lichter i am 19 <br>
-i am a sophomore and i like coding <br>
-i hate snakes
 
-well i LOVE snakes
-i hate this team
-
-> > > > > > > 154c0efb406288e2b17ca09f886cdf4b2d788744
-
-make another change
